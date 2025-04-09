@@ -1,0 +1,11 @@
+---
+layout: default
+---
+
+<h1> ALCYON seminar </h1>
+
+  <table class="pubtable">
+    {% for talk in site.seminar %}
+           {% include seminar_talk.html %}
+     {% endfor %}
+  </table>

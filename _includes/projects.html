@@ -1,0 +1,19 @@
+<h1><a id="projects">Projects</a></h1>
+  <table class="pubtable">
+    <thead>
+      <tr><th colspan="4" >Ongoing</th></tr>
+    </thead>
+    {% for project in site.projects %}
+      {% if project.status == "ongoing" %}
+        {% include project.html %}
+       {% endif %}
+    {% endfor %}
+    <thead>
+      <tr><th colspan="4" >Concluded</th></tr>
+    </thead>
+    {% for project in site.projects %}
+      {% if project.status == "concluded" %}
+        {% include project.html %}
+       {% endif %}
+    {% endfor %}
+  </table>

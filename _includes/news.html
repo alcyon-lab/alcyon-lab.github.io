@@ -1,0 +1,14 @@
+<h1> News </h1>
+  <table class="pubtable">
+    {% for news_item in site.news %}
+      {% if news_item.active %}
+        <tr class="pubentry">
+          {% if news_item.date %}
+            <td>{{ news_item.date  | date_to_long_string }} </td><td>{{ news_item.content }}</td>
+          {% else %}
+            <td>{{ news_item.content }}</td>
+          {% endif %}
+      </tr>
+      {% endif %}
+    {% endfor %}
+  </table>

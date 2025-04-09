@@ -1,0 +1,13 @@
+---
+layout: default
+---
+
+<h1> {{ page.academic_title }} {{ page.name }}</h1>
+<br>
+{{ page.affiliation }}
+<br>
+<a href="http://{{ page.webpage }}" target="_blank">webpage</a><br>
+<a href="{{site.baseurl}}/cv/{{page.cv}}.pdf"  target="_blank">Curriculum Vitae</a><br>
+<br>
+<h2>Short Bio</h2>
+{{ content }}

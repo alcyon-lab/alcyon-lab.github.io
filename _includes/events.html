@@ -1,0 +1,12 @@
+<h1><a id="events">Events</a></h1>
+
+  <table class="pubtable">
+    {% assign events =  site.events| sort: "year"  %}
+      
+      {% for event in events reversed %}
+          {% if event.active %}
+            {% include event.html %}
+          {% endif %}
+      {% endfor %}
+
+  </table>

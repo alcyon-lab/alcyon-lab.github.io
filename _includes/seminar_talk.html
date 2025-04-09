@@ -1,0 +1,11 @@
+
+<tr class="pubentry">
+  <td>{{talk.date}}</td>
+  <td>{{talk.speaker}}<br>{{talk.title}}</td>
+  <td>{{talk.affiliation}}</td>
+  <td class="slides">
+          {% if talk.slides %}<a href="{{talk.slides}}" target="_blank"><i class="fa fa-television"></i></a>
+          {% else %} <i class="fa fa-television"></i>
+          {% endif %}
+  </td>
+</tr>

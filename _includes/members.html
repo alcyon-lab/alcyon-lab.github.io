@@ -1,0 +1,67 @@
+<h1><a id="members">Members</a></h1>
+
+  <table class="pubtable">
+    <!-- <thead>
+      <tr><th colspan="4" >Faculty</th></tr>
+    </thead> -->
+
+      {% for member in site.members %}
+        {% unless member.alumni %}
+          {% if member.position == "Faculty" %}
+            {% include member.html %}
+            {% endif %}
+        {% endunless %}
+      {% endfor %}
+
+      {% for member in site.members %}
+      {% unless member.alumni %}
+          {% if member.position == "Associate Faculty" %}
+            {% include member.html %}
+          {% endif %}
+          {% endunless %}
+      {% endfor %}
+
+      {% for member in site.members %}
+      {% unless member.alumni %}
+          {% if member.position == "Researcher" %}
+            {% include member.html %}
+          {% endif %}
+          {% endunless %}
+      {% endfor %}
+      <!-- <thead>
+        <tr><th colspan="4" >Graduate Students</th></tr>
+      </thead> -->
+      {% for member in site.members %}
+      {% unless member.alumni %}
+          {% if member.position == "PhD Student" %}
+            {% include member.html %}
+          {% endif %}
+          {% endunless %}
+      {% endfor %}
+
+         <!-- <thead>
+           <tr><th colspan="4" >Graduate Students</th></tr>
+         </thead> -->
+         {% for member in site.members %}
+         {% unless member.alumni %}
+            {% if member.position == "MSc Student" %}
+              {% include member.html %}
+            {% endif %}
+            {% endunless %}
+        {% endfor %}
+
+      <!-- <thead>
+        <tr><th colspan="4" >Undergraduate Students</th></tr>
+      </thead> -->
+
+      {% for member in site.members %}
+      {% unless member.alumni %}
+
+        {% if member.position == "Undergraduate Student" %}
+          {% include member.html %}
+          {% endif %}
+          {% endunless %}
+      {% endfor %}
+
+  </table>
+ 

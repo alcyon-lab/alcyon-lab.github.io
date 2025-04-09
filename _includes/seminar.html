@@ -1,0 +1,15 @@
+<h1> Seminar </h1>
+
+<a href="{{site.baseurl}}/seminars">All seminars</a></td>
+
+
+  <table class="pubtable">
+    <thead>
+      <tr><th colspan="4" >2021</th></tr>
+    </thead>
+    {% for talk in site.seminar %}
+      {% unless talk.past %}
+        {% include seminar_talk.html %}
+      {% endunless %}
+    {% endfor %}
+  </table>

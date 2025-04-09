@@ -1,0 +1,8 @@
+{% assign topics =  site.researchtopics| sort: "order"  %}
+<div class="container">
+  <div class="card-deck">
+    {% for topic in topics   %}
+      {% include researchtopic.html %}
+    {% endfor %}
+  </div>
+</div>

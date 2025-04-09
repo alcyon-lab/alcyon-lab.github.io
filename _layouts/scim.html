@@ -1,0 +1,52 @@
+---
+layout: default
+---
+
+<h1> Symbolic Computation Istanbul Meetings </h1>
+
+The Symbolic Computation Istanbul Meetings is a biweekly event taking place  on Friday 17:00 in IMBM (Bogazici University South Campus 34342 Bebek - Istanbul).
+<br><br>
+The meetings are open to all students and researchers interested in the area of symbolic computation.
+Please register in
+<a href="https://tinyurl.com/symbolicmeetings/">this form</a>
+in order to get updates. Registering also helps us with the logistics.
+<br><br>
+The meetings will be available online through zoom, but we strongly encourage you to join us in IMBM. One of the main goals of SCIM is to allow people interested in symbolic computation to meet and exchange ideas.
+<br><br>
+After the seminar, the plan is to have dinner. Students are encouraged to join.
+<br><br>
+<br><br>
+Organizers:
+<ul>
+  <li>Tülay Ayyıldız Akoğlu</li>
+  <li>Türkü Özlüm Çelik</li>
+  <li>Zafeirakis Zafeirakopoulos</li>
+</ul>
+<br><br>
+<p>
+  <h2>Upcoming talks:</h2>
+</p>
+<br>
+  <table class="pubtable">
+    {% capture now %}{{'now' | date: '%s' | plus: 0 }}{% endcapture %}
+    {% for talk in site.scim %}
+      {% capture date %}{{talk.when | date: '%s' | plus: 0 }}{% endcapture %}
+      {% if date > now %}
+        {% include scim_talk.html %}
+      {% endif %}
+    {% endfor %}
+  </table>
+<br><br>
+<p>
+  <h2>Past talks:</h2>
+</p>
+<br>
+  <table class="pubtable">
+    {% capture now %}{{'now' | date: '%s' | plus: 0 }}{% endcapture %}
+    {% for talk in site.scim reversed %}
+      {% capture date %}{{talk.when | date: '%s' | plus: 0 }}{% endcapture %}
+      {% if date < now %}
+        {% include scim_talk.html %}
+      {% endif %}
+    {% endfor %}
+  </table>

@@ -1,0 +1,62 @@
+---
+layout: default
+---
+
+In order to choose a topic for your
+<a href="#bitirme">final year project</a>
+ or your
+ <a href="#masters">master's thesis</a>
+contact me at zafeirakopoulos@gtu.edu.tr.
+In general, I would be happy to discuss other topics as well.
+<br><br>
+
+<h1 id="bitirme"> Final Year Projects</h1>
+<br>
+
+All topics are available to students from both computer engineering and math departments.
+The separation in the lists below is only a suggestion.
+
+<br><br>
+<h2> Computer Engineering</h2>
+
+
+  {% for thesis in site.topics %}
+    {% if thesis.active  %}
+      {% if thesis.cs  %}
+        {% if thesis.undergrad  %}
+          {% include thesis.html %}
+        {% endif %}
+      {% endif %}
+    {% endif %}
+
+  {% endfor %}
+
+<br>
+<h2> Mathematics </h2>
+
+
+  {% for thesis in site.topics %}
+    {% if thesis.active  %}
+      {% if thesis.math  %}
+        {% if thesis.undergrad  %}
+          {% include thesis.html %}
+        {% endif %}
+      {% endif %}
+    {% endif %}
+
+  {% endfor %}
+
+
+<br><br>
+<h1 id="masters"> Master's thesis topics</h1>
+<br>
+If you are interested in working with me for your master's, you should contact me before the
+application deadline.
+<br>
+  {% for thesis in site.topics %}
+    {% if thesis.active  %}
+      {% if thesis.grad  %}
+          {% include thesis.html %}
+        {% endif %}
+    {% endif %}
+  {% endfor %}

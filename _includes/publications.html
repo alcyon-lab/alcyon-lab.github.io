@@ -1,0 +1,94 @@
+<h1><a id="publications">Publications</a></h1>
+
+
+{% assign psize = site.preprints | size %}
+{% if psize > 0 %}
+<table class="pubtable">
+
+<thead>
+  <tr><th colspan="3" >Preprints</th></tr>
+</thead>
+
+{% assign preprints =  site.preprints | sort: "year"  %}
+{% for post in preprints reversed  %}
+
+{% include pubentry.html %}
+
+{% endfor %}
+
+</table>
+{% endif %}
+
+
+<table class="pubtable">
+<thead>
+  <tr><th colspan="3" >Books</th></tr>
+</thead>
+
+
+{% assign books =  site.books | sort: "year"  %}
+{% for post in books reversed  %}
+ 
+{% include pubentry.html %}
+
+{% endfor %}
+
+</table>
+
+<table class="pubtable">
+
+<thead>
+  <tr><th colspan="3" >Conference Papers</th></tr>
+</thead>
+
+{% assign proceedings =  site.proceedings| sort: "year"  %}
+{% for post in proceedings reversed  %}
+ 
+{% include pubentry.html %}
+
+{% endfor %}
+
+</table>
+
+<table class="pubtable">
+
+<thead>
+  <tr><th colspan="3" >Journal Papers</th></tr>
+</thead>
+{% assign articles = site.articles | sort: "year"  %}
+{% for post in articles reversed  %}
+
+{% include pubentry.html %}
+
+{% endfor %}
+
+</table>
+
+<table class="pubtable">
+
+<thead>
+  <tr><th colspan="3" >Talks (Invited &amp; Symposia w/o Proceedings)</th></tr>
+</thead>
+
+{% for post in site.talks reversed %}
+
+{% include pubentry.html %}
+
+{% endfor %}
+
+</table>
+
+<table class="pubtable">
+
+<thead>
+  <tr><th colspan="3" >Theses</th></tr>
+</thead>
+
+{% assign theses =  site.theses| sort: "year"  %}
+{% for post in theses reversed  %}
+ 
+{% include pubentry.html %}
+
+{% endfor %}
+
+</table>

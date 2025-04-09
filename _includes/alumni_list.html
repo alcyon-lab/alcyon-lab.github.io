@@ -1,0 +1,48 @@
+<h1><a id="members">Post-doc Alumni</a></h1>
+
+
+  <table class="pubtable">
+    <tr class="pubentry">
+      <td> Name </td>
+      <td> Position</td>
+      <td>Next position</td>
+    </tr>
+    {% for member in site.members %}
+      {% if member.position == "PostDoc"  and member.alumni == true %}
+        {% include alumni.html %}
+      {% endif %}
+    {% endfor %}
+  </table>
+
+
+  <h1><a id="members">MSc Alumni</a></h1>
+
+
+  <table class="pubtable">
+    <tr class="pubentry">
+      <td> Name </td>
+      <td> Position</td>
+      <td>Next position</td>
+    </tr>
+    {% for member in site.members %}
+      {% if member.position == "MSc Student"  and member.alumni == true %}
+        {% include alumni.html %}
+      {% endif %}
+    {% endfor %}
+  </table>
+
+  <h1><a id="members">Undergraduate Alumni</a></h1>
+
+
+  <table class="pubtable">
+    <tr class="pubentry">
+      <td> Name </td>
+      <td> Position</td>
+      <td>Next position</td>
+    </tr>
+    {% for member in site.members %}
+      {% if  member.position == "Undergraduate Student"  and member.alumni == true %}
+        {% include alumni.html %}
+       {% endif %}
+    {% endfor %}
+  </table>

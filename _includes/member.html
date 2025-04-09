@@ -1,0 +1,27 @@
+
+<tr class="pubentry">
+  <td><a href="{{site.baseurl}}/{{member.url}}">{{member.name}}</a></td>
+  <td>{{member.position}}</td>
+  <td>{{member.affiliation}}</td>
+  <td>
+    <table class="dltable">
+      <tr>
+        <td class="cv">
+          {% if member.cv %}<a href="{{site.baseurl}}/cv/{{member.cv}}.pdf" target="_blank"><i class="fa fa-file-pdf-o"></i></a>
+          {% else %} <i class="fa fa-file-pdf-o"></i>
+          {% endif %}
+        </td>
+        <td class="webpage">
+          {% if member.webpage %}<a href="http://{{member.webpage}}" target="_blank"><i class="fa fa-globe"></i></a>
+          {% else %} <i class="fa fa-globe"></i>
+          {% endif %}
+        </td>
+        <td class="scholar">
+          {% if member.thesis %}<a href="{{site.baseurl}}/theses/{{member.thesis}}.pdf" target="_blank"><i class="fa fa-graduation-cap"></i></a>
+          {% else %} <i class="fa fa-graduation-cap"></i>
+          {% endif %}
+        </td>
+      </tr>
+    </table>
+  </td>
+</tr>

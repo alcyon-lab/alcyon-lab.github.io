@@ -1,0 +1,27 @@
+<h1> Software </h1>
+  <table class="pubtable">
+    <thead>
+      <tr><th colspan="4" >Python & Jupyter/Sage notebooks</th></tr>
+    </thead>
+    {% for sw in site.software %}
+      {% if sw.category == "python" %}
+        {% include sw.html %}
+       {% endif %}
+    {% endfor %}
+    <thead>
+      <tr><th colspan="4" >C/C++</th></tr>
+    </thead>
+    {% for sw in site.software %}
+      {% if sw.category == "c++" %}
+        {% include sw.html %}
+       {% endif %}
+    {% endfor %}
+    <thead>
+      <tr><th colspan="4" >LaTeX</th></tr>
+    </thead>
+    {% for sw in site.software %}
+      {% if sw.category == "latex" %}
+        {% include sw.html %}
+       {% endif %}
+    {% endfor %}
+  </table>
