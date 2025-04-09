@@ -27,7 +27,7 @@ twitter: alcyonlab
 linkedin: groups/8811634/
 # Build settings
 markdown: kramdown
-remote_theme: minima
+theme: minima
 # plugins:
   # - jekyll-feed
 #
