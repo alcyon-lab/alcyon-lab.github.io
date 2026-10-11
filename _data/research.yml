@@ -1,17 +1,17 @@
-# Research directions
+# Research directions. `icon` is a short formula shown above the title.
 areas:
   - title: Computer Algebra
-    icon: "∑"
-    text: Algorithmic methods in commutative algebra. In recent years we have studied resultant systems in detail.
+    icon: "Res(f₁,…,fₙ)"
+    text: Algorithmic methods in commutative algebra, including the study of resultant systems.
   - title: Effective Algebraic Geometry
-    icon: "∿"
+    icon: "V(I) ⊂ 𝔸ⁿ"
     text: Singularities, real solving and the algorithmic tools needed to explore them, such as Hermite matrices and their signatures.
   - title: Optimization
-    icon: "↗"
+    icon: "min cᵀx"
     text: Integer linear optimization. We use Polyhedral Omega to solve ILPs, and ILP to improve polynomial multiplication algorithms.
   - title: Polyhedral Geometry
-    icon: "◇"
-    text: Efficient algorithms for polytopes and cones, and polyhedral methods that speed up algorithms in other fields such as combinatorics.
+    icon: "P = {x | Ax ≤ b}"
+    text: Efficient computation with polyhedra, and polyhedral methods that improve algorithms across combinatorics and algorithm design.
   - title: Number Theory
-    icon: "ℕ"
-    text: Mostly integer partitions. This area poses many computational challenges and also supplies beautiful algorithmic tools.
+    icon: "n = λ₁ + ⋯ + λₖ"
+    text: Computational questions and algorithmic tools arising from integer partitions.

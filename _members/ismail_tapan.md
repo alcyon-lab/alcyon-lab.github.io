@@ -1,9 +1,9 @@
 ---
-name: Ismail Tapan
+name: İsmail Tapan
 role: Undergraduate Student
 node: istanbul
-alumni: false
-lead: false
+alumni: true
 affiliation: Gebze Technical University
 order: 6
+advisors: [tulay]
 ---

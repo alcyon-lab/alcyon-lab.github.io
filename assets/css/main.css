@@ -510,3 +510,16 @@ html[data-first="istanbul"] .brand-nodes .node-istanbul { order: -2; }
 .brand-nodes > span { display: inline-flex; align-items: center; gap: .35em; }
 .footer-grid.node-order > :first-child { order: -3; }
 .footer-grid.node-order > :last-child { order: 3; }
+
+/* logo: light and dark artwork */
+.brand img.logo { width: 46px; height: auto; }
+.footer-logo { width: 64px; height: auto; }
+.logo-dark { display: none; }
+:root[data-theme="dark"] .logo-light { display: none; }
+:root[data-theme="dark"] .logo-dark { display: block; }
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) .logo-light { display: none; }
+  :root:not([data-theme="light"]) .logo-dark { display: block; }
+}
+.area-icon { font: italic 400 1.05rem/1.3 var(--serif); letter-spacing: 0; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.intro p { font-size: 1.1rem; }

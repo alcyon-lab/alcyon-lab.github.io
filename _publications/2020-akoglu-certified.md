@@ -1,6 +1,6 @@
 ---
 title: Certified Hermite Matrices from Approximate Roots - Univariate Case
-authors: Tulay Ayyildiz Akoglu, Agnes Szanto
+authors: Tülay Ayyıldız Akoglu, Ágnes Szántó
 venue: MACIS 2019, Lecture Notes in Computer Science 11989
 year: 2020
 type: conference

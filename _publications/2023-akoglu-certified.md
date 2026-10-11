@@ -1,6 +1,6 @@
 ---
 title: Certified Hermite matrices from approximate roots
-authors: Tulay Ayyildiz Akoglu, Agnes Szanto
+authors: Tülay Ayyıldız Akoglu, Ágnes Szántó
 venue: Journal of Symbolic Computation 117, pp. 101–118
 year: 2023
 type: journal

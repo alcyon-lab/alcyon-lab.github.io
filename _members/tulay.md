@@ -1,5 +1,5 @@
 ---
-name: Tulay Ayyildiz
+name: Tülay Ayyıldız
 honorific: Dr.
 role: Node lead
 node: istanbul

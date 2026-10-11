@@ -1,9 +1,9 @@
 ---
 name: Başak Karakaş
-role: MSc Student
+role: PhD Student
 node: istanbul
 alumni: false
 lead: false
-affiliation: Gebze Technical University
-order: 5
+affiliation: Research Assistant, Gebze Technical University
+order: 4
 ---
