@@ -1,0 +1,25 @@
+---
+title: Research
+permalink: /research/
+eyebrow: Research & software
+lede: We improve the mathematics of algorithms and build high-performance implementations of them. These are our main directions and the software that comes out of them.
+---
+<div class="area-grid">
+  {% for a in site.data.research.areas %}
+  <article class="area">
+    <span class="area-icon" aria-hidden="true">{{ a.icon }}</span>
+    <h3>{{ a.title }}</h3>
+    <p>{{ a.text }}</p>
+  </article>
+  {% endfor %}
+</div>
+
+<h2>Software</h2>
+<p>We release our implementations as open source, from Polyhedral Omega and alcyon.jl to PTOPO and math-data.</p>
+<div class="soft-index">{% assign groups = site.software | sort: "order" %}{% for g in groups %}<a href="{{ '/software/' | relative_url }}#{{ g.title | slugify }}">{{ g.title }}</a>{% endfor %}</div>
+<p><a class="btn btn-ghost" href="{{ '/software/' | relative_url }}">All software →</a></p>
+
+<h2>How we work</h2>
+<div class="prose">
+<p>Each project has theory goals, code deliverables and milestones. Members share updates every two weeks in the same format: progress, then blockers, then next steps. We hold ourselves to experiments others can reproduce, benchmarked results and a short technical report for every project.</p>
+</div>

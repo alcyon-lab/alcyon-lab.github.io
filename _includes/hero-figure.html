@@ -1,0 +1,23 @@
+{%- comment -%}
+  A lattice polygon with two marked vertices. Athens sits south-west of Istanbul,
+  as on a map. The arc is the Aegean link between them.
+{%- endcomment -%}
+<svg class="hero-figure" viewBox="0 0 420 340" role="img" aria-labelledby="hf-title">
+  <title id="hf-title">Two lattice points, Athens and Istanbul, joined by an arc across a lattice polytope</title>
+  <defs>
+    <pattern id="lattice" width="28" height="28" patternUnits="userSpaceOnUse" x="14" y="2">
+      <circle cx="14" cy="14" r="1.6" class="lat-dot"/>
+    </pattern>
+  </defs>
+  <rect width="420" height="340" fill="url(#lattice)"/>
+  <polygon class="poly" points="56,268 140,296 336,240 364,72 252,44 84,128"/>
+  <polygon class="poly poly-inner" points="112,240 224,212 308,128 224,100 140,156"/>
+  <path class="arc" d="M84,268 Q 150,40 336,72"/>
+  <path class="arc-shadow" d="M84,268 Q 150,40 336,72"/>
+  <g class="pin athens"><circle cx="84" cy="268" r="11" class="halo"/><circle cx="84" cy="268" r="6"/></g>
+  <g class="pin istanbul"><circle cx="336" cy="72" r="11" class="halo"/><circle cx="336" cy="72" r="6"/></g>
+  <text x="100" y="300" class="lbl">ATHENS</text>
+  <text x="100" y="316" class="lbl-sub">37.97° N · 23.78° E</text>
+  <text x="250" y="34" class="lbl" text-anchor="end">ISTANBUL</text>
+  <text x="250" y="50" class="lbl-sub" text-anchor="end">40.81° N · 29.36° E</text>
+</svg>

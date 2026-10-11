@@ -1,81 +1,65 @@
-# Welcome to Jekyll!
-#
-# This config file is meant for settings that affect your whole blog, values
-# which you are expected to set up once and rarely edit after that. If you find
-# yourself editing this file very often, consider using Jekyll's data files
-# feature for the data you need to update frequently.
-#
-# For technical reasons, this file is *NOT* reloaded automatically when you use
-# 'bundle exec jekyll serve'. If you change this file, please restart the server process.
+# ALCYON lab — Athens · Istanbul
+# After editing this file, restart `jekyll serve`.
 
-# Site settings
-# These are used to personalize your new site. If you look in the HTML files,
-# you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
-# You can create any custom variable you would like, and they will be accessible
-# in the templates via {{ site.myvariable }}.
-labimg: images/alcyon.png
-title: ALCYON lab
+title: ALCYON
+tagline: Algorithms for Combinatorics, Geometry, Optimization and Number theory
+description: >-
+  ALCYON is a symbolic computation lab with two nodes, in Athens and Istanbul,
+  working on algorithms for combinatorics, geometry, optimization and number theory.
+url: "https://alcyon-lab.github.io"
+baseurl: ""
+lang: en
+
 email: alcyon.lab@gmail.com
-description: >- # this means to ignore newlines until "baseurl:"
-  ALCYON lab
-  Algorithms, Algebra, Combinatorics, Geometry, Optimization and Number Theory
-# baseurl: "/lab" # the subpath of your site, e.g. /blog
-# url: "" # the base hostname & protocol for your site, e.g. http://example.com
-#https://alcyon-lab.gitlab.io
-twitter: alcyonlab
-# github_username:  jekyll
-linkedin: groups/8811634/
-# Build settings
+# Publications before this year are kept in _publications/ but not shown
+publications_from: 2016
+
+join_form: https://forms.gle/FrDxYuaX18j63T1r7
+social:
+  twitter: alcyonlab
+  linkedin: groups/8811634/
+  scholar: https://scholar.google.com/citations?user=NEeNVssAAAAJ&hl=en
+  github: alcyon-lab
+
 markdown: kramdown
-theme: minima
-# plugins:
-  # - jekyll-feed
-#
-# Exclude from processing.
-# The following items will not be processed, by default. Create a custom list
-# to override the default setting.
-# exclude:
-#   - Gemfile
-#   - Gemfile.lock
-#   - node_modules
-#   - vendor/bundle/
-#   - vendor/cache/
-#   - vendor/gems/
-#   - vendor/ruby/
+kramdown:
+  input: GFM
+  hard_wrap: false
 
-excerpt_separator: "<!--more-->"
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
 
-collections_dir: collections
 collections:
   members:
-    people: true
     output: true
-  proceedings:
-    output: false
-  books:
-    output: false
-  preprints:
-    output: false
-  articles:
-    output: false
-  journal:
-    output: false
-  events:
-    output: true
-  talks:
-    output: false
-    sort_by: year
-  seminar:
-    output: true
+    permalink: /people/:name/
   projects:
     output: true
-  news:
+    permalink: /projects/:name/
+  publications:
     output: false
   software:
-    output: true
+    output: false
+  news:
+    output: false
   topics:
     output: true
-  scim:
-    output: true
-  researchtopics:
-    output: true
+    permalink: /topics/:name/
+
+defaults:
+  - scope: { path: "", type: members }
+    values: { layout: member }
+  - scope: { path: "", type: projects }
+    values: { layout: project }
+  - scope: { path: "", type: topics }
+    values: { layout: topic, math: true }
+  - scope: { path: "" }
+    values: { layout: page }
+
+exclude:
+  - README.md
+  - Gemfile
+  - Gemfile.lock
+  - vendor
+  - _migration

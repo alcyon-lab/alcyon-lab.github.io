@@ -1,0 +1,39 @@
+---
+layout: default
+---
+{% assign parts = page.name | split: " " %}
+<section class="page-head node-{{ page.node }}">
+  <div class="wrap profile-head">
+    <span class="avatar avatar-lg" aria-hidden="true">{{ parts.first | slice: 0 }}{{ parts.last | slice: 0 }}</span>
+    <div>
+      {% include node-tag.html node=page.node %}{% if page.alumni %} <span class="node-tag alumni">Alumni</span>{% endif %}
+      <h1>{% if page.honorific %}<span class="muted-title">{{ page.honorific }}</span> {% endif %}{{ page.name }}</h1>
+      <p class="lede">{% if page.alumni %}Former {{ page.role }}{% elsif page.lead %}Lead of the {{ site.data.nodes[page.node].name }} node{% else %}{{ page.role }}{% endif %}{% if page.affiliation %} · {{ page.affiliation }}{% endif %}</p>
+      <p class="links">
+        {% if page.website %}<a class="btn btn-ghost" href="{{ page.website }}">Personal page ↗</a>{% endif %}
+        {% if page.scholar %}<a class="btn btn-ghost" href="{{ page.scholar }}">Google Scholar ↗</a>{% endif %}
+        {% if page.thesis %}<a class="btn btn-ghost" href="{{ page.thesis | relative_url }}">Thesis (PDF)</a>{% endif %}
+        {% if page.email %}<a class="btn btn-ghost" href="mailto:{{ page.email }}">Email</a>{% endif %}
+      </p>
+    </div>
+  </div>
+</section>
+<section class="wrap page-body narrow">
+  {% if page.next_position or page.advisors.size > 0 %}
+  <dl class="facts profile-facts">
+    {% if page.advisors.size > 0 %}<div><dt>Advised by</dt><dd>{% include advisors.html list=page.advisors %}</dd></div>{% endif %}
+    {% if page.next_position %}<div><dt>Next position</dt><dd>{{ page.next_position }}</dd></div>{% endif %}
+  </dl>
+  {% endif %}
+  {% assign working = site.topics | where_exp: "t", "t.students contains page.slug" %}
+  {% if working.size > 0 %}
+  <p class="callout">Working on: {% for t in working %}<a href="{{ t.url | relative_url }}"><strong>{{ t.title }}</strong></a>{% unless forloop.last %}, {% endunless %}{% endfor %}</p>
+  {% endif %}
+  {% if content != "" %}{{ content }}{% else %}<p class="muted">Profile coming soon.</p>{% endif %}
+  {% assign mine = site.publications | sort: "year" | reverse | where_exp: "p", "p.year >= site.publications_from" | where_exp: "p", "p.authors contains page.name" %}
+  {% if mine.size > 0 %}
+  <h2>Publications with ALCYON</h2>
+  <ol class="pubs">{% for p in mine %}{% include pub.html pub=p %}{% endfor %}</ol>
+  {% endif %}
+  <p><a href="{{ '/people/' | relative_url }}">← All people</a></p>
+</section>

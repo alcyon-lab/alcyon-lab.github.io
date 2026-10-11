@@ -1,0 +1,52 @@
+# node: athens | istanbul | online
+- title: Applications of Computer Algebra
+  year: 2025
+  dates: July 2025
+  where: Heraklion, Crete
+  organizers: Giorgos Kapetanakis, Eleni Tzanaki, Zafeirakis Zafeirakopoulos
+  node: athens
+  description: Applications of Computer Algebra - ACA 2025 was held in Heraklion (Crete, Greece).
+- title: Applications of Computer Algebra
+  year: 2022
+  dates: 15–19 August 2022
+  where: Gebze Technical University
+  organizers: Zafeirakis Zafeirakopoulos
+  node: istanbul
+  description: Applications of Computer Algebra - ACA 2022 was held at Gebze Technical University (Türkiye).
+- title: Computer Algebra in Scientific Computing
+  year: 2022
+  dates: 22–26 August 2022
+  where: Gebze Technical University
+  organizers: Zafeirakis Zafeirakopoulos
+  node: istanbul
+  description: Computer Algebra in Scientific Computing - CASC 2022 was held at Gebze Technical University (Türkiye).
+- title: 'Symbolic Computation: Algorithms, Learning and Engineering'
+  year: 2022
+  dates: 8–26 August 2022
+  where: Gebze Technical University
+  organizers: Zafeirakis Zafeirakopoulos
+  node: istanbul
+  description: A three-week event celebrating symbolic computation, combining ACA 2022 and CASC 2022 at Gebze Technical University.
+- title: Machine Learning and Computer Algebra
+  year: 2021
+  dates: 23-27 July 2021
+  where: Online
+  organizers: Zafeirakis Zafeirakopoulos
+  node: online
+  description: 'The special session on "Machine Learning and Computer Algebra", in the context of Applications of Computer Algebra - ACA 2021, will focus on the interaction between machine learning and computer algebra. Both on ways computer algebra is used in machine learning and on how machine learning can assist with computer algebra problems. One of the goals of this session is to start the discussion for a systematic program for combining machine learning and computer algebra techniques. Topics of interest ------------------- Everything in the intersection of machine learning with computer algebra, including but not limited to: - using ML for solving algebraic problems - using ML for improving algebraic algorithms and tools - using computer algebra to assist computations in ML - algebraic problems adequate for ML - experimental studies of interactions between ML and CA - Related software tools Call for contribution ----------------------- You are welcome to submit short abstracts on
+    topics related to the topics of MaLaCA. The submission is done via email to [Zafeirakis Zafeirakopoulos](mailto:zafeirakopoulos@gmail.com). ACA 2021 - Applications of Computer Algebra -------------------------------------------- PAC will take place as a special session in the context of the [ACA - "Applications of Computer Algebra"](https://aca2021.sba-research.org/) conference. Organization ------------- - [Zafeirakis Zafeirakopoulos](../members/zaf.html)'
+- title: Polytopes - Algebra - Computation
+  year: 2021
+  dates: 23-27 July 2021
+  where: Online
+  organizers: Gizem Süngü, Zafeirakis Zafeirakopoulos
+  node: online
+  description: 'The special session on "Polytopes-Algebra-Computation", in the context of Applications of Computer Algebra - ACA 2021, will focus on the interaction of polyhedral geometry with algebra and algebraic geometry from a computational viewpoint. Topics of interest ------------------- Everything in the intersection of polyhedral geometry, algebraic geometry and algorithms, including but not limited to: - Polytopes in algebra and algebraic geometry - Newton polytopes - Computational Ehrhart theory - Algebraic aspects of polytopes - Algebraic applications of computational geometry - Applications of Polytopes (e.g., statistics, combinatorics etc.) - Software - Normaliz, polymake, 4ti2, barvinok, gfan, LattE, etc. Participants ------------- - Winfried Bruns - Normaliz meets Lawrence: polytope volume by signed decomposition - Carles Checa - Tropical refinement - Antonio Macchia - Slack realization spaces and realizability of polytopes - Cihan Okay - A hidden variable model for universal
+    quantum computation with magic states on qubits - Gizem Süngü - Parallel Polyhedal Omega - Mesut Şahin - Codes on Subgroups of Weighted Projective Torus Call for contribution ----------------------- You are welcome to submit short abstracts on topics related to the topics of PAC. The submission is done via email to [Zafeirakis Zafeirakopoulos](mailto:zafeirakopoulos@gmail.com). ACA 2020 - Applications of Computer Algebra -------------------------------------------- PAC will take place as a special session in the context of the [ACA - "Applications of Computer Algebra"](https://aca2021.sba-research.org/) conference. Organization ------------- - [Gizem Süngü](../members/gizem.html) - [Zafeirakis Zafeirakopoulos](../members/zaf.html)'
+- title: NEMO kick-off
+  year: 2020
+  dates: January 23, 2020
+  where: Gebze Technical University
+  organizers: Elias Tsigaridas, Zafeirakis Zafeirakopoulos
+  node: istanbul
+  description: The project "NeMO - Non-linEar Methods and the geometry of Optimization" lead by Elias Tsigaridas and supported by TUBITAK in the context of "2232 - Uluslararası Lider Araştırmacılar Programı" will have its kick-off meeting on January 24 2020 in the ALCYON lab in Gebze Technical University. Schedule 13:00 Opening 13:20 Elias Tsigaridas 14:00 Break 14:20 Gizem Süngü 14:40 Nurgül Kangal 15:00 Başak Karakaş 15:20 Break / Discussions 16:00 Hande 16:20 Umutcan NeMO has project assistant positions for grad students. You can apply [here](https://docs.google.com/forms/d/e/1FAIpQLScmr74l7dHPSbeDDc6oOqEmMOzRANHJuh9sYCkMjz0hRYfZBw/viewform?usp=sf_link)

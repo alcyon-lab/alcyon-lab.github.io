@@ -1,0 +1,6 @@
+{% case include.node %}
+{% when "athens" %}<span class="node-tag athens"><span class="dot athens"></span>Athens</span>
+{% when "istanbul" %}<span class="node-tag istanbul"><span class="dot istanbul"></span>Istanbul</span>
+{% when "associate" %}<span class="node-tag associate"><span class="dot associate"></span>Associate</span>
+{% else %}<span class="node-tag online"><span class="dot online"></span>{{ include.node | capitalize }}</span>
+{% endcase %}

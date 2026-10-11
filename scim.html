@@ -1,0 +1,24 @@
+---
+title: Symbolic Computation Istanbul Meetings
+permalink: /scim/
+eyebrow: SCIM · seminar series
+lede: A fortnightly seminar for anyone interested in symbolic computation, hosted by the Istanbul node. Talks are given in person and streamed online.
+math: true
+---
+<div class="prose">
+<p>The meetings took place on Fridays at 17:00 at IMBM (Boğaziçi University, South Campus, Bebek, Istanbul) and were streamed on Zoom. The main goal of SCIM is to let people interested in symbolic computation meet and exchange ideas.</p>
+</div>
+
+<h2>Past talks <span class="count">{{ site.data.scim.size }}</span></h2>
+<div class="talks">
+  {% for t in site.data.scim %}
+  <details class="talk">
+    <summary>
+      <span class="mono small talk-date">{{ t.when | split: " " | slice: 0, 3 | join: " " }}</span>
+      <span class="talk-title">{{ t.title }}</span>
+      <span class="talk-speaker">{{ t.speaker }} <span class="muted">· {{ t.affiliation }}</span></span>
+    </summary>
+    <div class="talk-abstract">{{ t.abstract | markdownify }}</div>
+  </details>
+  {% endfor %}
+</div>

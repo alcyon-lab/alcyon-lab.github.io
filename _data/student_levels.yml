@@ -1,0 +1,43 @@
+# Topics page: two columns (Athens | Istanbul), one row per study level.
+
+# Every level a topic can list in `levels:`
+levels:
+  undergrad-research:
+    title: Undergraduate research
+    node: athens
+    blurb: >-
+      Research projects for undergraduate mathematics students who want a first taste of research:
+      reading a paper in depth, running computational experiments, or contributing to the lab's software.
+  undergrad-thesis:
+    title: Undergraduate thesis
+    node: istanbul
+    blurb: >-
+      Graduation projects (bitirme projesi) for final-year undergraduates. Projects usually last two
+      semesters and combine some theory with a working implementation.
+  msc:
+    title: Master's thesis
+    node: both
+    blurb: >-
+      MSc theses in mathematics, computer science or computer engineering. Co-supervision across the
+      two nodes is possible.
+  phd:
+    title: PhD thesis
+    node: both
+    blurb: >-
+      Doctoral topics, usually connected to one of our funded projects. Write to the node lead before
+      applying to the graduate programme.
+
+# Rows of the page, top to bottom: which level fills each column
+rows:
+  - id: undergraduate
+    title: Undergraduate
+    athens: undergrad-research
+    istanbul: undergrad-thesis
+  - id: masters
+    title: Master's
+    athens: msc
+    istanbul: msc
+  - id: phd
+    title: PhD
+    athens: phd
+    istanbul: phd

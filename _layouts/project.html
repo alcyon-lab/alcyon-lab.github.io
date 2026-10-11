@@ -1,0 +1,20 @@
+---
+layout: default
+---
+<section class="page-head node-{{ page.node }}">
+  <div class="wrap">
+    <p class="eyebrow">{% if page.acronym %}{{ page.acronym }} · {% endif %}{{ page.agency }}</p>
+    <h1>{{ page.title }}</h1>
+    <dl class="facts">
+      <div><dt>Period</dt><dd>{{ page.start }} – {{ page.end }}</dd></div>
+      <div><dt>Principal investigator</dt><dd>{{ page.pi }}</dd></div>
+      {% if page.funding %}<div><dt>Funding</dt><dd>{{ page.funding }}</dd></div>{% endif %}
+      <div><dt>Status</dt><dd><span class="status status-{{ page.status }}">{{ page.status }}</span></dd></div>
+      <div><dt>Hosted by</dt><dd>{% include node-tag.html node=page.node %}</dd></div>
+    </dl>
+  </div>
+</section>
+<section class="wrap page-body narrow prose">
+  {% if content != "" %}{{ content }}{% else %}<p class="muted">Project description coming soon.</p>{% endif %}
+  <p><a href="{{ '/projects/' | relative_url }}">← All projects</a></p>
+</section>

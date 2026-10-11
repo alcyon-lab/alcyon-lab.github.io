@@ -1,0 +1,88 @@
+---
+title: Topics
+permalink: /topics/
+eyebrow: Theses & research projects for students
+lede: Open topics from both nodes, from a first undergraduate project to a PhD. Pick something that excites you and write to the supervisor or the node lead.
+---
+{% assign L = site.data.student_levels %}
+{% assign open = site.topics | where: "status", "open" | sort: "title" %}
+{% assign ongoing = site.topics | where: "status", "in-progress" | sort: "title" %}
+{% assign node_keys = "athens,istanbul" | split: "," %}
+
+<nav class="row-jump" aria-label="Jump to level">
+  {% for row in L.rows %}<a href="#{{ row.id }}">{{ row.title }}</a>{% endfor %}
+  {% if ongoing.size > 0 %}<a href="#in-progress">In progress</a>{% endif %}
+</nav>
+
+<div class="students-board">
+  <div class="node-order board-heads" aria-hidden="true">
+    {% for key in node_keys %}{% assign n = site.data.nodes[key] %}
+    {% assign own = open | where: "node", key %}{% assign shared = open | where: "node", "both" %}
+    {% assign c = own | concat: shared | size %}
+    <div class="board-head node-{{ key }}">
+      <span class="dot {{ key }}"></span><strong>{{ n.name }}</strong>
+      <span class="muted small">{{ n.institution }}</span>
+      <span class="mono small board-count">{{ c }} open</span>
+    </div>
+    {% endfor %}
+  </div>
+
+  {% for row in L.rows %}
+  <section class="board-row" id="{{ row.id }}">
+    <h2 class="row-title">{{ row.title }}</h2>
+    <div class="node-order board-cols">
+      {% for key in node_keys %}
+      {% assign lvkey = row[key] %}{% assign lv = L.levels[lvkey] %}
+      {% assign at_level = open | where_exp: "t", "t.levels contains lvkey" %}
+      {% assign own = at_level | where: "node", key %}{% assign shared = at_level | where: "node", "both" %}
+      {% assign cell = own | concat: shared | sort: "title" %}
+      <div class="board-cell node-{{ key }}">
+        <header class="cell-head">
+          <p class="eyebrow"><span class="dot {{ key }}"></span>{{ site.data.nodes[key].name }} · {{ cell.size }} open</p>
+          <h3>{{ lv.title }}</h3>
+          <p class="muted small">{{ lv.blurb }}</p>
+        </header>
+        {% if cell.size > 0 %}
+          <div class="cell-topics">{% for t in cell %}{% include topic-card.html topic=t %}{% endfor %}</div>
+        {% else %}
+          {% assign l = site.members | where: "slug", site.data.nodes[key].lead | first %}
+          <p class="empty-state">No topics posted yet. Interested anyway? Write to <a href="{{ l.url | relative_url }}">{{ l.name }}</a> and we will find something for you.</p>
+        {% endif %}
+      </div>
+      {% endfor %}
+    </div>
+  </section>
+  {% endfor %}
+
+  {% if ongoing.size > 0 %}
+  <section class="board-row" id="in-progress">
+    <h2 class="row-title">In progress</h2>
+    <p class="muted">Topics students are working on right now. They are taken, but show the kind of work we do.</p>
+    <div class="node-order board-cols">
+      {% for key in node_keys %}
+      {% assign own = ongoing | where: "node", key %}{% assign shared = ongoing | where: "node", "both" %}
+      {% assign cell = own | concat: shared %}
+      <div class="board-cell node-{{ key }}">
+        <p class="eyebrow"><span class="dot {{ key }}"></span>{{ site.data.nodes[key].name }}</p>
+        {% if cell.size > 0 %}
+        <ul class="ongoing">
+          {% for t in cell %}
+          <li><a href="{{ t.url | relative_url }}">{{ t.title }}</a>
+            <span class="muted small">{% include advisors.html list=t.students %}{% if t.supervisors.size > 0 %} · supervised by {% include advisors.html list=t.supervisors %}{% endif %}</span></li>
+          {% endfor %}
+        </ul>
+        {% else %}<p class="muted small">Nothing listed.</p>{% endif %}
+      </div>
+      {% endfor %}
+    </div>
+  </section>
+  {% endif %}
+</div>
+
+<div class="cta-banner" style="margin-top:3rem">
+  <div>
+    <h2>Have your own idea?</h2>
+    <p>Students often propose their own projects. If it touches combinatorics, geometry, optimization, number theory or computer algebra, tell us about it.</p>
+  </div>
+  <a class="btn" href="{{ site.join_form }}">Get in touch ↗</a>
+</div>

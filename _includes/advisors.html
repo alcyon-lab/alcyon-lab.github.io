@@ -1,0 +1,1 @@
+{%- for s in include.list -%}{%- assign who = site.members | where: "slug", s | first -%}{%- if who -%}<a href="{{ who.url | relative_url }}">{{ who.name }}</a>{%- else -%}{{ s }}{%- endif -%}{%- unless forloop.last %}, {% endunless -%}{%- endfor -%}

@@ -1,0 +1,27 @@
+# The two nodes of the lab. `lead` is the file name (without .md) in _members/.
+athens:
+  name: Athens
+  native: Αθήνα
+  lead: zaf
+  institution: National and Kapodistrian University of Athens
+  unit: Department of Mathematics
+  address: Panepistimiopolis, Zografou, 157 84 Athens, Greece
+  coords: "37.97° N · 23.78° E"
+  summary: >-
+    The Athens node sits in the Department of Mathematics of the University of Athens.
+    It works on the mathematics behind our algorithms, from polyhedral geometry and
+    generating functions to symbolic linear algebra, and on mathdata, our system for
+    representing mathematical objects.
+istanbul:
+  name: Istanbul
+  native: İstanbul
+  lead: tulay
+  institution: Gebze Technical University
+  unit: Istanbul metropolitan area
+  address: Gebze Technical University, 41400 Gebze, Kocaeli, Türkiye
+  coords: "40.81° N · 29.36° E"
+  summary: >-
+    The Istanbul node is where ALCYON started, at Gebze Technical University. It works
+    on computer algebra and effective algebraic geometry, including real solving and
+    Hermite methods, hosts most of our funded projects and theses, and runs the
+    Symbolic Computation Istanbul Meetings (SCIM).

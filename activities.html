@@ -1,0 +1,27 @@
+---
+title: Activities
+permalink: /activities/
+eyebrow: Conferences, workshops & news
+lede: Meetings we have organised in Greece, Türkiye and online, plus lab news.
+---
+<ol class="timeline">
+  {% for e in site.data.events %}
+  <li class="tl-item node-{{ e.node }}">
+    <span class="tl-year mono">{{ e.year }}</span>
+    <div class="tl-body">
+      {% include node-tag.html node=e.node %}
+      <h3>{{ e.title }}</h3>
+      <p class="muted small">{{ e.dates }} · {{ e.where }}{% if e.organizers %} · Organisers: {{ e.organizers }}{% endif %}</p>
+      {% if e.description %}<p>{{ e.description | markdownify | strip_html | truncatewords: 60 }}</p>{% endif %}
+    </div>
+  </li>
+  {% endfor %}
+</ol>
+
+<h2>News archive</h2>
+<ul class="news">
+  {% assign news = site.news | sort: "date" | reverse %}{% for n in news %}
+  <li><time class="mono" datetime="{{ n.date | date_to_xmlschema }}">{{ n.date | date: "%d %b %Y" }}</time>
+    <div><strong>{{ n.title }}</strong>{{ n.content | markdownify }}</div></li>
+  {% endfor %}
+</ul>

@@ -1,0 +1,210 @@
+# Symbolic Computation Istanbul Meetings — newest first.
+- when: 13 January 2023 17:00
+  speaker: Büşra Sert
+  title: An Algorithm for Testing the Half-plane Property of Matroids
+  affiliation: TU Dresden
+  abstract: 'For each hyperbolic polynomial $h$, there is an associated closed convex
+
+    cone called the hyperbolicity cone of $h$. A convex cone is called
+
+    spectrahedral if it can be described by linear matrix inequalities.
+
+    Spectrahedral cones can be described as hyperbolicity cones of some
+
+    hyperbolic polynomials. Whether the other direction is true, however, is
+
+    an open question. This is the question the generalized Lax conjecture
+
+    considers and posits.
+
+
+    Choe et al. in 2004 showed that the support of every homogeneous
+
+    multiaffine polynomial with the half-plane property (such a polynomial
+
+    is hyperbolic) is the collection of bases of some matroid $M$. In search
+
+    of potential counter-examples, this connection made finding matroids
+
+    with the half-plane property of new interest. For example, Brändén used
+
+    the structure of matroids to produce counter-examples for a stronger
+
+    version of the conjecture.
+
+
+    In this talk, we present an algorithm for testing the half-plane
+
+    property of matroids. The tests are performed by checking some criteria
+
+    on the Rayleigh differences of the basis generating polynomials, given
+
+    by Brändén and Wagner-Wei, using the packages ``SumsOfSquares'''',
+
+    ``Matroids'''' for Macaulay2, and the Julia package ``Homotopy
+
+    Continuation.jl''''. Using this algorithm, we give a complete
+
+    classification of matroids on at most $8$ elements with respect to the
+
+    half-plane property, and provide our test results on matroids on $9$
+
+    elements.'
+- when: 23 September 2022 17:00
+  speaker: Dr. Maria Chlouveraki
+  title: On the reality of complex reflection groups (and their associated Hecke algebras)
+  affiliation: University of Athens
+  abstract: Real reflection groups are the groups of symmetry of real-life objects, and their Hecke algebras appear naturally in the study of finite algebraic groups. Real reflection groups are particular cases though of complex reflection groups, whose Hecke algebras were defined by Broué, Malle and Rouquier over 20 years ago, and have since become a subject of research in their own right. Even though numerous results in the past two decades indicate that these objects behave in the complex case similarly to the real one, most of their properties are hard to prove and demand a case-by-case analysis. Symbolic computation has been a powerful ally to representation theorists, and in this talk we will discuss how it was used to prove some of the most fundamental conjectures concerning the structure of Hecke algebras associated with complex reflection groups.
+- when: 27 May 2022 17:00
+  speaker: Dr. Rosa Winter
+  title: Configurations of lines on del Pezzo surfaces of degree 1
+  affiliation: King's College London
+  abstract: 'Del Pezzo surfaces are classified by their degree $d$, which is an integer between 1 and 9. Famous examples are the smooth cubic surfaces in $\mathbb{P}^3$ ($d=3$). Over an algebraically closed field, these contain 27 lines, of which at most three can go through the same point. Similarly, a del Pezzo surface of degree two contains 56 lines, of which at most four can go through the same point. In both of these cases, this maximum is given by the incidence graph of the lines. A del Pezzo surface of degree one contains 240 lines, and the upper bound given by the incidence graph for the number of lines that go through the same point is 16. However, in joint work with Ronald van Luijk we show that in almost all characteristics, the maximal number of lines that go through the same point is 10.
+
+
+    In this talk I will first motivate the study of the configurations of the 240 lines. I will then show how we proved our result using the $E_8$ root system, classical algebraic geometry, and symbolic computation with groebner bases.'
+- when: 13 May 2022 17:00
+  speaker: Dr. Ayesha Qureshi
+  title: A conjecture on the Hilbert series of binomial ideals associated with simple polyominoes
+  affiliation: Sabanci University
+  abstract: 'We will discuss certain types of binomial ideals arising from combinatorial struc-
+
+    tures. In particular, focus will be on the binomial ideals arising from
+
+
+    (1) certain sets of 2-minors of a matrix of indeterminates (also known as poly-
+
+    omino ideals);
+
+
+    (2) incomparable elements in finite distributive lattices (also known as join-meet
+
+    ideals).
+
+    We will present a conjecture on the reduced Hilbert series of the coordinate ring
+
+    of a simple polyomino ideal in terms of particular arrangements of non-attacking
+
+    rooks that can be placed on the polyomino. By using a computational approach,
+
+    the conjecture holds for all simple polyominoes up to rank 11. By using an alge-
+
+    braic approach, the conjecture holds true for the class of parallelogram polyomino
+
+    ideals, by looking at those as join-meet ideals of simple planar distributive lattices.
+
+
+    We will also give a combinatorial interpretation(in terms of Motzkin paths) of the Gorensteinnes of parallelogram polyomino ideals.
+
+    This talk is based on a recent joint work with Francesco Romeo and Giancarlo
+
+    Rinaldo.
+
+
+    References:
+
+
+    1) A.A.Qureshi, F. Romeo, G. Rinaldo, ”Hilbert series of Parallelogram Polyomi-
+
+    noes”, arXiv:2111.01907'
+- when: 29 April 2022 17:00
+  speaker: Dr. Nursel Erey
+  title: Regularity and k-admissable matchings
+  affiliation: Gebze Technical University
+  abstract: In the algebraic study of edge ideals and their powers, some graph parameters such as (induced) matching numbers provide sharp upper bounds for regularity. In this talk, we will focus on the squarefree powers of edge ideals. We introduce the concept of k-admissable matching number which ranges between the induced matching number and the matching number of a graph as k varies. We show that such number provides an upper bound for the regularity of squarefree powers of edge ideals associated to forests. Among the interesting consequences of this bound is a complete characterization of those ideals which have linear resolutions.
+- when: 15 April 2022 17:00
+  speaker: Dr. Oğuz Yayla
+  title: The number of irreducible polynomials over finite fields with prescribed coefficients
+  affiliation: Middle East Technical University
+  abstract: In this talk, the formula for the number of monic irreducible polynomials of degree n over the finite field is discussed. We will review the existing results and the importance of the problem. Then, we will give recent results for the case where the coefficients of x^{n-1} and x vanish. In particular, we give a relation between rational points of algebraic curves over finite fields and the number of elements "a" in the n-th extension of the finite field for which Trace(a)=0 and Trace(a^{-1})=0. Finally, we will show the application of the problem to give an upper bound on the number of distinct constructions of a family of sequences with good family complexity and cross-correlation measure.
+- when: 1 April 2022 17:00
+  speaker: Dr. Bilge Sipal Sert
+  title: Border Bases and Border Basis Schemes
+  affiliation: Afiniti
+  abstract: 'The basic idea of border basis theory is to describe a zero-dimensional
+
+    quotient ring by an order ideal of terms O whose residue classes form a
+
+    K-vector space basis of that ring.
+
+    In this talk, we compare Grobner Bases with Border Bases and discuss
+
+    the advantages of Border Bases. We then introduce Border basis schemes
+
+    which are schemes that parametrize all zero-dimensional ideals that have
+
+    an O-border basis. If an order ideal O with μ elements is defined in a
+
+    two dimensional polynomial ring and it is of some special shapes, then the
+
+    O-border basis scheme is isomorphic to the affine space A^{2μ}.
+
+
+    We present a general condition for an O-border basis scheme to be iso-
+
+    morphic to an affine space that is independent of the shape of the order ideal
+
+    and the dimension of the polynomial ring that the order ideal is defined in.'
+- when: 18 March 2022 17:00
+  speaker: Dr. Emrah Sercan Yilmaz
+  title: Divisibility of L-Polynomials for a Family of Artin-Schreier Curves
+  affiliation: Atılım University
+  abstract: 'In this talk we consider the curves C_k^(p,a) : y^p − y = x^{p^k+1} + ax defined over F_p and k give a positive answer to a conjecture about a divisibility condition on L-polynomials of the curves C_k^(p,a). Our proof involves finding an exact formula for the number of F_{p^n} -rational points on C_k^(p,a) for all n, and uses a result we proved elsewhere about the k number of rational points on supersingular curves.'
+- when: 4 March 2022 17:00
+  speaker: Dr. Mesut Şahin
+  title: Rational points of lattice ideals on a toric variety and toric codes
+  affiliation: Hacettepe Unıversıty
+  abstract: We begin by introducing basic notions about algebraic geometric codes obtained from evaluating rational functions on K-rational points of a toric variety, where K is a field with q elements. Then, we get more technical and exhibit some results on computing the number of K-rational points cut out by a lattice ideal via Smith normal form of the matrix whose columns constitute a basis of the lattice. We also share a Nullstellensatz type theorem over K establishing a one to one correspondence between subgroups of the dense split torus and certain homogeneous lattice ideals. Time permitting, we give formulas for the main parameters of toric codes on subgroups of the torus of Hirzebruch surfaces.
+- when: 18 February 2022 16:00
+  speaker: Dr. Fatma Karaoğlu
+  title: The Eckardt Point Configuration of Cubic Surfaces Revisited
+  affiliation: Tekirdag Namik Kemal University
+  abstract: 'The classification problem for cubic surfaces with 27 lines is concerned with describing a complete set of the projective
+
+    equivalence classes of such surfaces. Despite a long history of work, the problem is still open. One approach is to use a coarserequivalence relation based on geometric invariants. The Eckardt point configuration is one such invariant. It can be used as a coarse-grain case distinction in the classification problem. We provide an explicit parametrization of the equations of cubic surfaces with a given Eckardt point configuration over any field. Our hope is that this will be a step towards the bigger goal of classifying all cubic surfaces with 27 lines. This is a joint work with Anton Betten from Kuwait University.'
+- when: 18 February 2022 17:00
+  speaker: Dr. Anton Betten
+  title: Orbiter - Classifying Combinatorial Objects
+  affiliation: Colorado State University, USA
+  abstract: 'In mathematics and computer science, computer algebra, also called symbolic computation or algebraic computation, is a scientific area that refers to the study and development of algorithms and software for manipulating mathematical expressions and other mathematical objects.
+
+    We will discuss the system Orbiter which is aimed at classifying mathematical objects of combinatorial nature.'
+- when: 04 February 2022 17:00
+  speaker: Dr. Erdal Imamoğlu
+  title: Sparse Representations of Polynomials
+  affiliation: Kırklareli University
+  abstract: Univariate sparse polynomial interpolation is the process of reconstructing an unknown polynomial f from given a way to evaluate f at a chosen point, an upper bound on the degree of f, and an upper bound on the number of nonzero terms of f. Algorithms for interpolating an unknown polynomial that has a sparse representation in the standard power basis dates back to the 18th century and it is rediscovered in 1980s. Within the last years, algorithms for interpolating an unknown polynomial that has a sparse representation in a basis different than the standard basis are developed. In this talk, we present methods to interpolate an unknown polynomial that has a sparse representation in terms of Chebyshev polynomials, Dickson polynomials of the (k+1)-th kind, or Bernstein polynomials.
+- when: 17 December 2021 17:00
+  speaker: Dr. Can Ozan Oğuz
+  title: Induction and Restriction on Symmetry Groups of Binary Trees
+  affiliation: Gebze Technical University
+  abstract: 'Symmetry groups of binary trees are isomorphic to iterated wreath products of symmetric groups of order two. These groups embed into each other and form a tower. In our collaboration with Mee Seong Im, our aim was to describe the relations between induction and restriction on representations of this tower of groups. Even though we didn''t get a full description of the relevant category, we have partial results concerning the vector space and algebra structure of certain hom spaces. In the talk I will focus on the origin of the problem and various approaches we found helpful during our research.
+
+
+    I will present a new algebraic approach for computing the orthogonal projection of a point onto a rational algebraic surface embedded in the three dimensional projective space, which is a joint work with Nicolás Botbol, Laurent Busé and Marc Chardin. Our approach amounts to turn this problem into the computation of the finite fibers of a generically finite trivariate rational map whose source space is either bi-graded or trigraded and which has one dimensional base locus: the congruence of normal lines to the rational surface. This latter problem is solved by using certain syzygies associated to this rational map for building matrices that depend linearly in the variables of the three dimensional ambient space. In fact, these matrices have the property that their cokernels at a given point p in three dimensional space are related to the pre-images of the p via the rational map. Thus, they are also related to the orthogonal projections of p onto the rational surface. Then, the orthogonal
+    projections of a point are approximately computed by means of eigenvalues and eigenvectors numerical computations. Here, we rely on numerical linear algebra in order to deal with floating-point data.'
+- when: 03 December 2021 17:00
+  speaker: Dr. Fatma Karaoğlu
+  title: The smooth cubic surfaces with 15 lines
+  affiliation: Department of Mathematics, Tekirdag Namik Kemal University, Turkey
+  abstract: "It is well-known that a smooth cubic surface has 27 lines over an algebraically closed field. If the field is not closed, however, fewer lines are possible. The next possible case is that of smooth cubic surfaces with 15 lines.\nThis work is a contribution to the problem of classifying smooth cubic surfaces with 15 lines over fields of positive characteristic. We present an algorithm to classify such surfaces over small finite fields. Our classification algorithm is based on a new normal form of the equation of a cubic surface with 15 lines and at most 10 Eckardt points.\nThe case of cubic surfaces with more than 10 Eckardt points is dealt with separately.\nClassification results for fields of order at most 13  are presented and a verification using an enumerative formula\nof Das is performed. Our work is based on a generalization of the old result due to Cayley and Salmon that  \nthere are 27 lines if the field is algebraically closed.\nAlong the way, we show that the line-intersection\
+    \ graph of smooth cubic surfaces with 15 lines is unique."
+- when: 05 November 2021 17:00
+  speaker: Dr. Tülay Ayyıldız Akkoğlu
+  title: Hermite Matrices and their signatures
+  affiliation: Istanbul Technical University
+  abstract: "Let I be an ideal generated by polynomials f_1,...,f_m such that f_i is in R[x_1,...,x_n] for all i=1,...,m. First we describe how to construct a Hermite matrix with respect to the ideal I and an auxiliary polynomial g in R[x_1,...,x_n].  \nThen, we will define the signature of Hermite matrices. For some choices of the auxiliary polynomial g, signatures can reveal some interesting properties of the given polynomial system. Some of them are related to real counting, real root isolation, and sum of squares."
+- when: 08 October 2021 17:00
+  speaker: Dr. Türkü Özlüm Çelik
+  title: Dubroving threefold of an algebraic curve
+  affiliation: Bosphorus University
+  abstract: 'The solutions to the Kadomtsev-Petviashvili equation that arise from a fixed complex algebraic curve are parametrized by a threefold in a weighted projective space, which we name after Boris Dubrovin. Current methods from nonlinear algebra are applied to study parametrizations and defining equations of Dubrovin threefolds. We highlight the dichotomy between transcendental representations and exact algebraic computations. Finally, a natural question arises: what happens to the Dubrovin threefold when the underlying curve degenerates?'
+- when: 24 September 2021 17:00
+  speaker: Dr. Madalina Erascu
+  title: Using Real Quantifier Elimination for Synthesizing Optimal Numerical Algorithms
+  affiliation: Faculty of Mathematics & Informatics, West University of Timisoara, Romania
+  abstract: 'Various problems in mathematics, science and engineering can be reduced to real quantifier elimination (quantifier elimination over real closed fields). Around 1930, Alfred Tarski showed that real quantifier elimination can be carried out algorithmically. In 1975, George Collins provided a dramatically more efficient algorithm. Since then, there has been intensive research to make further improvement of efficiency for a certain important class of formulas (inputs). In our research, we consider formulas arising in the synthesis of optimal numerical algorithms. In this talk, we present a case study on the square root problem: given the real number x and the error bound eps, find a real interval such that it contains sqrt(x) and its width is less than eps. As usual, we begin by fixing an algorithm schema, namely, iterative refining: the algorithm starts with an initial interval and repeatedly updates it by applying a refinement function, say R on it until it becomes narrow enough.
+    Then the synthesis amounts to finding a refinement function R that ensures that the algorithm is correct (loop invariant), terminating (contraction), and optimal. All these can be formulated as quantifier elimination over the real numbers. Hence, in principle, they can be all carried out automatically. However the computational requirement is so huge, making the automatic synthesis practically impossible with the current general quantifier elimination software. Hence, we did some hand derivations and were able to synthesize semi-automatically optimal algorithms under suitable assumptions.
+
+
+    This is joint work with Hoon Hong.'

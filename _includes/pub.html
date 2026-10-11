@@ -1,0 +1,10 @@
+{% assign p = include.pub %}
+<li class="pub" data-type="{{ p.type }}">
+  <span class="pub-type tag tag-{{ p.type }}">{{ p.type }}</span>
+  <div>
+    <p class="pub-title">{% if p.link %}<a href="{{ p.link }}">{{ p.title }}</a>{% else %}{{ p.title }}{% endif %}</p>
+    <p class="pub-authors">{{ p.authors }}</p>
+    <p class="pub-venue"><em>{{ p.venue }}</em>, {{ p.year }}
+      {% if p.pdf %} · <a href="{{ p.pdf | relative_url }}">PDF</a>{% endif %}</p>
+  </div>
+</li>

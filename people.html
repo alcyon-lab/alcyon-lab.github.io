@@ -1,0 +1,71 @@
+---
+title: People
+permalink: /people/
+eyebrow: The team
+lede: Mathematicians, computer scientists and engineers, from undergraduates to faculty, spread across two cities.
+---
+{% assign current = site.members | where_exp: "m", "m.alumni != true" | sort: "order" %}
+{% assign node_keys = "athens,istanbul" | split: "," %}
+
+<div class="node-order board-heads people-heads" aria-hidden="true">
+  {% for key in node_keys %}{% assign n = site.data.nodes[key] %}
+  {% assign c = current | where: "node", key | size %}
+  <div class="board-head node-{{ key }}">
+    <span class="dot {{ key }}"></span><strong>{{ n.name }}</strong>
+    <span class="muted small">{{ n.institution }}</span>
+    <span class="mono small board-count">{{ c }} member{% if c != 1 %}s{% endif %}</span>
+  </div>
+  {% endfor %}
+</div>
+
+<div class="node-order board-cols people-cols">
+  {% for key in node_keys %}
+  {% assign lead = current | where: "node", key | where: "lead", true | first %}
+  {% assign rest = current | where: "node", key | where_exp: "m", "m.lead != true" %}
+  <div class="board-cell node-{{ key }}">
+    <p class="eyebrow mobile-only"><span class="dot {{ key }}"></span>{{ site.data.nodes[key].name }}</p>
+    {% if lead %}
+    <div class="lead-card">
+      <p class="eyebrow">Node lead</p>
+      {% include member-card.html member=lead %}
+    </div>
+    {% endif %}
+    {% assign by_role = rest | group_by: "role" %}
+    {% for g in by_role %}
+    <div class="role-group">
+      <p class="eyebrow">{% case g.name %}{% when "Faculty" %}Faculty{% when "PostDoc" %}Postdocs{% when "PhD Student" %}PhD students{% when "MSc Student" %}MSc students{% when "Undergraduate Student" %}Undergraduates{% else %}{{ g.name }}{% endcase %} · {{ g.items.size }}</p>
+      <div class="cell-members">{% for m in g.items %}{% include member-card.html member=m %}{% endfor %}</div>
+    </div>
+    {% endfor %}
+  </div>
+  {% endfor %}
+</div>
+
+{% assign assoc = current | where: "node", "associate" %}
+{% if assoc.size > 0 %}
+<h2>Associate faculty</h2>
+<p class="muted">Long-term collaborators who work with both nodes.</p>
+<div class="member-grid">
+  {% for m in assoc %}{% include member-card.html member=m %}{% endfor %}
+</div>
+{% endif %}
+
+{% assign alumni = site.members | where: "alumni", true | sort: "order" %}
+<h2 id="alumni">Alumni <span class="count">{{ alumni.size }}</span></h2>
+<p class="muted">Former students and postdocs, and where they went next.</p>
+<div class="table-wrap">
+<table class="alumni">
+  <thead><tr><th>Name</th><th>Role in ALCYON</th><th>Advisor</th><th>Institution</th><th>Next position</th></tr></thead>
+  <tbody>
+  {% for a in alumni %}
+    <tr>
+      <td><a href="{{ a.url | relative_url }}">{% if a.honorific %}{{ a.honorific }} {% endif %}{{ a.name }}</a>{% if a.thesis %} <a class="tag" href="{{ a.thesis | relative_url }}">thesis</a>{% endif %}</td>
+      <td>{{ a.role }}</td>
+      <td>{% if a.advisors.size > 0 %}{% include advisors.html list=a.advisors %}{% endif %}</td>
+      <td>{{ a.affiliation }}</td>
+      <td>{{ a.next_position }}</td>
+    </tr>
+  {% endfor %}
+  </tbody>
+</table>
+</div>

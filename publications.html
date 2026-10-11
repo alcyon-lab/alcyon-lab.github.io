@@ -1,0 +1,21 @@
+---
+title: Publications
+permalink: /publications/
+eyebrow: Output
+lede: Papers, proceedings, books and theses by lab members since 2016.
+---
+{% assign pubs = site.publications | where_exp: "p", "p.year >= site.publications_from" | sort: "title" | sort: "year" | reverse %}
+<div class="filters" role="group" aria-label="Filter by type">
+  <button class="chip" aria-pressed="true" data-filter="all">All <span>{{ pubs.size }}</span></button>
+  {% assign t_list = "journal,conference,book,preprint,thesis" | split: "," %}{% for t in t_list %}
+  {% assign c = pubs | where: "type", t | size %}
+  {% if c > 0 %}<button class="chip" aria-pressed="false" data-filter="{{ t }}">{{ t | capitalize }} <span>{{ c }}</span></button>{% endif %}
+  {% endfor %}
+</div>
+{% assign years = pubs | group_by: "year" %}
+{% for y in years %}
+<section class="year-group">
+  <h2 class="year">{{ y.name }}</h2>
+  <ol class="pubs">{% for p in y.items %}{% include pub.html pub=p %}{% endfor %}</ol>
+</section>
+{% endfor %}

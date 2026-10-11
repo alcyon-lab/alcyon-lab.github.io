@@ -1,0 +1,58 @@
+---
+layout: default
+---
+{% assign key = page.node %}
+{% assign n = site.data.nodes[key] %}
+{% assign lead = site.members | where_exp: "m", "m.slug == n.lead" | first %}
+<section class="node-hero node-{{ key }}">
+  <div class="wrap node-hero-grid">
+    <div>
+      <p class="eyebrow"><span class="dot {{ key }}"></span>ALCYON · {{ n.name }} node</p>
+      <h1>{{ n.name }} <span class="native">{{ n.native }}</span></h1>
+      <p class="lede">{{ n.summary }}</p>
+    </div>
+    <aside class="node-card">
+      <p class="eyebrow">Node lead</p>
+      {% if lead %}{% include member-card.html member=lead %}{% endif %}
+      <dl class="facts compact">
+        <div><dt>Institution</dt><dd>{{ n.institution }}</dd></div>
+        <div><dt>Unit</dt><dd>{{ n.unit }}</dd></div>
+        <div><dt>Address</dt><dd>{{ n.address }}</dd></div>
+        <div><dt>Coordinates</dt><dd class="mono">{{ n.coords }}</dd></div>
+      </dl>
+    </aside>
+  </div>
+</section>
+
+<section class="wrap section">
+  {{ content }}
+
+  {% assign people = site.members | where: "node", key | where_exp: "m", "m.alumni != true" | sort: "order" %}
+  {% assign former = site.members | where: "node", key | where_exp: "m", "m.alumni == true" %}
+  <h2>People in {{ n.name }}</h2>
+  <div class="member-grid">
+    {% for m in people %}{% include member-card.html member=m %}{% endfor %}
+  </div>
+  {% if former.size > 0 %}<p class="muted">Plus {{ former.size }} <a href="{{ '/people/' | relative_url }}#alumni">alumni</a> who trained here.</p>{% endif %}
+
+  {% assign projs = site.projects | where: "node", key | sort: "year" | reverse %}
+  {% if projs.size > 0 %}
+  <h2>Projects hosted here</h2>
+  <ul class="project-list">
+    {% for p in projs %}
+    <li><a href="{{ p.url | relative_url }}"><strong>{% if p.acronym %}{{ p.acronym }}: {% endif %}{{ p.title }}</strong></a>
+      <span class="muted small">{{ p.agency }} · {{ p.start }} – {{ p.end }}</span></li>
+    {% endfor %}
+  </ul>
+  {% endif %}
+
+  {% assign evs = site.data.events | where: "node", key %}
+  {% if evs.size > 0 %}
+  <h2>Activities organised here</h2>
+  <ul class="event-list">
+    {% for e in evs %}
+    <li><span class="mono">{{ e.year }}</span> <strong>{{ e.title }}</strong> <span class="muted small">{{ e.where }}</span></li>
+    {% endfor %}
+  </ul>
+  {% endif %}
+</section>

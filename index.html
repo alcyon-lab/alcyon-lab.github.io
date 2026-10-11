@@ -1,0 +1,87 @@
+---
+layout: default
+title: Home
+body_class: home
+---
+{% assign ath = site.data.nodes.athens %}
+{% assign ist = site.data.nodes.istanbul %}
+<section class="hero">
+  <div class="wrap hero-grid">
+    <div class="hero-copy">
+      <p class="eyebrow">Symbolic computation lab · Athens &amp; Istanbul</p>
+      <h1>One lab,<br>two shores of the&nbsp;Aegean.</h1>
+      <p class="lede"><strong>ALCYON</strong> stands for <em>ALgorithms for Combinatorics, geometrY, Optimization and Number theory</em>. We improve the mathematics behind algorithms and turn it into fast, careful software. We do this from two nodes, in <a class="node-link athens" href="{{ '/athens/' | relative_url }}">Athens</a> and <a class="node-link istanbul" href="{{ '/istanbul/' | relative_url }}">Istanbul</a>.</p>
+      <p class="cta-row">
+        <a class="btn" href="{{ '/research/' | relative_url }}">Our research</a>
+        <a class="btn btn-ghost" href="{{ '/join/' | relative_url }}">Join the lab →</a>
+      </p>
+    </div>
+    <div class="hero-art">{% include hero-figure.html %}</div>
+  </div>
+</section>
+
+<section class="nodes-split">
+  <div class="wrap split-grid node-order">
+    {% for pair in site.data.nodes %}{% assign key = pair[0] %}{% assign n = pair[1] %}
+    {% assign lead = site.members | where_exp: "m", "m.slug == n.lead" | first %}
+    {% assign count = site.members | where: "node", key | where_exp: "m", "m.alumni != true" | size %}
+    <article class="node-panel node-{{ key }}">
+      <p class="eyebrow"><span class="dot {{ key }}"></span>{{ n.name }} node <span class="native">{{ n.native }}</span></p>
+      <h2>{{ n.institution }}</h2>
+      <p>{{ n.summary }}</p>
+      <dl class="facts compact">
+        <div><dt>Led by</dt><dd><a href="{{ lead.url | relative_url }}">{{ lead.honorific }} {{ lead.name }}</a></dd></div>
+        <div><dt>Members</dt><dd>{{ count }}</dd></div>
+        <div><dt>Coordinates</dt><dd class="mono">{{ n.coords }}</dd></div>
+      </dl>
+      <a class="panel-link" href="{{ key | prepend: '/' | append: '/' | relative_url }}">Visit the {{ n.name }} node →</a>
+    </article>
+    {% endfor %}
+  </div>
+</section>
+
+<section class="wrap section">
+  <div class="section-head">
+    <h2>What we work on</h2>
+    <a href="{{ '/research/' | relative_url }}">Research &amp; software →</a>
+  </div>
+  <div class="area-grid">
+    {% for a in site.data.research.areas %}
+    <article class="area">
+      <span class="area-icon" aria-hidden="true">{{ a.icon }}</span>
+      <h3>{{ a.title }}</h3>
+      <p>{{ a.text }}</p>
+    </article>
+    {% endfor %}
+  </div>
+</section>
+
+<section class="band">
+  <div class="wrap two-col">
+    <div>
+      <div class="section-head"><h2>News</h2><a href="{{ '/activities/' | relative_url }}">Activities →</a></div>
+      <ul class="news">
+        {% assign news = site.news | sort: "date" | reverse %}{% for n in news limit:4 %}
+        <li><time class="mono" datetime="{{ n.date | date_to_xmlschema }}">{{ n.date | date: "%b %Y" }}</time>
+          <div><strong>{{ n.title }}</strong>{{ n.content | markdownify }}</div></li>
+        {% endfor %}
+      </ul>
+    </div>
+    <div>
+      <div class="section-head"><h2>Recent publications</h2><a href="{{ '/publications/' | relative_url }}">All →</a></div>
+      <ol class="pubs compact">
+        {% assign recent = site.publications | where_exp: "p", "p.type != 'preprint'" | sort: "year" | reverse %}{% for p in recent limit:4 %}{% include pub.html pub=p %}{% endfor %}
+      </ol>
+    </div>
+  </div>
+</section>
+
+<section class="wrap section">
+  <div class="cta-banner">
+    <div>
+      <h2>Come work with us</h2>
+      <p>We have thesis topics for undergraduate, MSc and PhD students in mathematics, computer science and engineering, at either node or across both.</p>
+    </div>
+    <a class="btn" href="{{ '/topics/' | relative_url }}">See open topics</a>
+  </div>
+</section>

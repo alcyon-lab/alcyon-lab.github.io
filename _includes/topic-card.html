@@ -1,0 +1,15 @@
+{% assign t = include.topic %}
+<article class="topic node-{{ t.node }}">
+  <p class="topic-tags">
+    {% if t.node == "both" %}<span class="node-tag both"><span class="dot athens"></span><span class="dot istanbul"></span>Both nodes</span>{% endif %}
+    {% if t.field %}<span class="tag">{{ t.field }}</span>{% endif %}
+    {% if t.difficulty %}<span class="tag tag-diff diff-{{ t.difficulty }}">{{ t.difficulty }}</span>{% endif %}
+    {% for a in t.area %}<span class="tag tag-{{ a }}">{% if a == "cs" %}CS{% else %}math{% endif %}</span>{% endfor %}
+  </p>
+  <h3><a href="{{ t.url | relative_url }}">{{ t.title }}</a></h3>
+  <p>{% if t.description %}{{ t.description }}{% else %}{{ t.content | markdownify | strip_html | truncatewords: 40 }}{% endif %}</p>
+  <p class="small topic-sup">
+    {% if t.supervisors.size > 0 %}<span class="muted">{% include advisors.html list=t.supervisors %}</span>{% endif %}
+    <a class="more" href="{{ t.url | relative_url }}">Details →</a>
+  </p>
+</article>

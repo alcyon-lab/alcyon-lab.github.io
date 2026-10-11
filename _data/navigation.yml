@@ -1,0 +1,9 @@
+- { title: Research,     url: /research/ }
+- { title: People,       url: /people/ }
+- { title: Publications, url: /publications/ }
+- { title: Topics,       url: /topics/ }
+- { title: Projects,     url: /projects/ }
+- { title: Activities,   url: /activities/ }
+- { title: Software,     url: /software/ }
+- { title: SCIM,         url: /scim/ }
+- { title: Join,         url: /join/ }

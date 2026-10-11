@@ -1,0 +1,38 @@
+---
+title: Software
+permalink: /software/
+eyebrow: Open source
+lede: Software we have developed or contributed to in a leading role. Everything is open source under the GNU GPL or MIT licence, as indicated in each repository.
+---
+{% assign groups = site.software | sort: "order" %}
+<nav class="soft-index" aria-label="Software groups">
+  {% for g in groups %}<a href="#{{ g.title | slugify }}">{{ g.title }}</a>{% endfor %}
+</nav>
+
+{% for g in groups %}
+<section class="soft-group" id="{{ g.title | slugify }}">
+  <div class="soft-head">
+    <h2>{{ g.title }}</h2>
+    <div class="muted">{{ g.content | markdownify }}</div>
+  </div>
+  <div class="repo-grid">
+    {% for r in g.repos %}
+    {% assign parts = r.repo | split: "/" %}
+    <a class="repo-card{% if parts[0] == 'alcyon-lab' %} repo-lab{% endif %}" href="https://github.com/{{ r.repo }}">
+      <span class="repo-name">
+        <svg viewBox="0 0 16 16" width="16" height="16" aria-hidden="true"><path fill="currentColor" d="M2 2.5A2.5 2.5 0 0 1 4.5 0h8.75a.75.75 0 0 1 .75.75v12.5a.75.75 0 0 1-.75.75h-2.5a.75.75 0 0 1 0-1.5h1.75v-2h-8a1 1 0 0 0-.71 1.71.75.75 0 0 1-1.06 1.06A2.49 2.49 0 0 1 2 11.5Zm10.5-1h-8a1 1 0 0 0-1 1v6.71A2.5 2.5 0 0 1 4.5 9h8ZM5 12.25a.25.25 0 0 1 .25-.25h3.5a.25.25 0 0 1 .25.25v3.25a.25.25 0 0 1-.4.2l-1.45-1.09a.25.25 0 0 0-.3 0L5.4 15.7a.25.25 0 0 1-.4-.2Z"/></svg>
+        <span class="repo-path"><span class="repo-owner">{{ parts[0] }}/</span><strong>{{ parts[1] }}</strong></span>
+      </span>
+      {% if r.note %}<span class="repo-note">{{ r.note }}</span>{% endif %}
+      {% if r.description != "" %}<span class="repo-desc">{{ r.description }}</span>{% endif %}
+      <span class="repo-meta mono">
+        {% if r.language != "" %}<span><span class="lang-dot lang-{{ r.language | slugify }}"></span>{{ r.language }}</span>{% endif %}
+        {% if r.license != "" %}<span>{{ r.license }}</span>{% endif %}
+        {% if r.stars > 0 %}<span>★ {{ r.stars }}</span>{% endif %}
+        {% if r.updated != "" %}<span>updated {{ r.updated | date: "%b %Y" }}</span>{% endif %}
+      </span>
+    </a>
+    {% endfor %}
+  </div>
+</section>
+{% endfor %}

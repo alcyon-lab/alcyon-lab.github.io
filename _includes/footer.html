@@ -1,3 +1,29 @@
-<footer>
-  <p class="remark">Theme inspired by <a href="https://github.com/orderedlist/minimal">orderedlist</a>.</p>
+<footer class="site-footer">
+  <div class="wrap footer-grid node-order">
+    <div>
+      <img src="{{ '/assets/img/alcyon.png' | relative_url }}" alt="" width="48" height="42" class="footer-logo">
+      <p class="footer-title">ALCYON lab</p>
+      <p class="muted small">{{ site.tagline }}</p>
+    </div>
+    {% for pair in site.data.nodes %}{% assign n = pair[1] %}
+    <div class="footer-node node-{{ pair[0] }}">
+      <p class="eyebrow"><span class="dot {{ pair[0] }}"></span>{{ n.name }} node</p>
+      <p class="small">{{ n.institution }}<br>{{ n.address }}</p>
+      <p class="mono small muted">{{ n.coords }}</p>
+    </div>
+    {% endfor %}
+    <div>
+      <p class="eyebrow">Elsewhere</p>
+      <ul class="plain small">
+        <li><a href="mailto:{{ site.email }}">{{ site.email }}</a></li>
+        <li><a href="https://twitter.com/{{ site.social.twitter }}">X / Twitter</a></li>
+        <li><a href="https://www.linkedin.com/{{ site.social.linkedin }}">LinkedIn group</a></li>
+        <li><a href="https://github.com/{{ site.social.github }}">GitHub</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="wrap footer-bottom small muted">
+    <span>© {{ site.time | date: "%Y" }} ALCYON lab</span>
+    <span>The halcyon (Αλκυόνη) is the kingfisher of Aegean legend. Its calm “halcyon days” fall in mid-winter.</span>
+  </div>
 </footer>

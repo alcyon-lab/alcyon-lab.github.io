@@ -1,0 +1,25 @@
+---
+title: Join ALCYON
+permalink: /join/
+eyebrow: Students & researchers
+lede: Our members come from mathematics, computer science and computer engineering, and range from undergraduates to faculty and engineers in industry. If our work interests you, get in touch.
+---
+<div class="join-grid node-order">
+  {% for pair in site.data.nodes %}{% assign key = pair[0] %}{% assign n = pair[1] %}
+  {% assign lead = site.members | where_exp: "m", "m.slug == n.lead" | first %}
+  <article class="node-panel node-{{ key }}">
+    <p class="eyebrow"><span class="dot {{ key }}"></span>Study in {{ n.name }}</p>
+    <h3>{{ n.institution }}</h3>
+    <p>Contact <a href="{{ lead.url | relative_url }}">{{ lead.honorific }} {{ lead.name }}</a> about theses and projects at this node.</p>
+  </article>
+  {% endfor %}
+  <article class="node-panel node-both">
+    <p class="eyebrow"><span class="dot athens"></span><span class="dot istanbul"></span>Either node</p>
+    <h3>Membership form</h3>
+    <p>Fill in the form and we will get back to you. Joint supervision across both nodes is possible.</p>
+    <a class="btn" href="{{ site.join_form }}">Apply to join ↗</a>
+  </article>
+</div>
+
+<h2>Thesis and project topics</h2>
+<p>Open topics for undergraduate, MSc and PhD students at both nodes are on the <a href="{{ '/topics/' | relative_url }}">Topics page</a>.</p>

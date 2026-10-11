@@ -1,0 +1,27 @@
+---
+title: Projects
+permalink: /projects/
+eyebrow: Funded research
+lede: Grants that have funded our research since 2016.
+---
+{% assign projs = site.projects | sort: "year" | reverse %}
+{% assign status_list = "ongoing,concluded" | split: "," %}{% for status in status_list %}
+{% assign group = projs | where: "status", status %}
+{% if group.size > 0 %}
+<h2>{{ status | capitalize }}</h2>
+<div class="project-grid">
+  {% for p in group %}
+  <a class="project-card node-{{ p.node }}" href="{{ p.url | relative_url }}">
+    <span class="project-top">
+      <span class="mono small">{{ p.start }} – {{ p.end }}</span>
+      {% include node-tag.html node=p.node %}
+    </span>
+    {% if p.acronym %}<span class="acronym">{{ p.acronym }}</span>{% endif %}
+    <span class="project-title">{{ p.title }}</span>
+    <span class="project-meta">{{ p.agency }}{% if p.funding %} · {{ p.funding }}{% endif %}</span>
+    <span class="project-meta">PI: {{ p.pi }}</span>
+  </a>
+  {% endfor %}
+</div>
+{% endif %}
+{% endfor %}

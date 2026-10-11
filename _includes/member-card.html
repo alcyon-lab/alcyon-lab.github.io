@@ -1,0 +1,10 @@
+{% assign m = include.member %}
+{% assign parts = m.name | split: " " %}
+<a class="member-card node-{{ m.node }}" href="{{ m.url | relative_url }}">
+  <span class="avatar" aria-hidden="true">{{ parts.first | slice: 0 }}{{ parts.last | slice: 0 }}</span>
+  <span class="member-meta">
+    <span class="member-name">{% if m.honorific %}{{ m.honorific }} {% endif %}{{ m.name }}</span>
+    <span class="member-role">{{ m.role }}</span>
+    {% if m.alumni and m.next_position %}<span class="member-aff">Next: {{ m.next_position }}</span>{% elsif m.affiliation %}<span class="member-aff">{{ m.affiliation }}</span>{% endif %}
+  </span>
+</a>
