@@ -2,7 +2,7 @@
 title: Activities
 permalink: /activities/
 eyebrow: Conferences, workshops & news
-lede: Meetings we have organised in Greece, Türkiye and online, plus lab news.
+lede: Meetings we have organised in Greece, Türkiye and online, plus recent lab news.
 ---
 <ol class="timeline">
   {% for e in site.data.events %}
@@ -18,10 +18,12 @@ lede: Meetings we have organised in Greece, Türkiye and online, plus lab news.
   {% endfor %}
 </ol>
 
-<h2>News archive</h2>
+<h2>Recent news</h2>
 <ul class="news">
-  {% assign news = site.news | sort: "date" | reverse %}{% for n in news %}
+  {% assign cutoff = site.old_news_before | date: "%s" | plus: 0 %}
+  {% assign news = site.news | sort: "date" | reverse %}{% for n in news %}{% assign t = n.date | date: "%s" | plus: 0 %}{% if t >= cutoff %}
   <li><time class="mono" datetime="{{ n.date | date_to_xmlschema }}">{{ n.date | date: "%d %b %Y" }}</time>
     <div><strong>{{ n.title }}</strong>{{ n.content | markdownify }}</div></li>
-  {% endfor %}
+  {% endif %}{% endfor %}
 </ul>
+<p><a href="{{ '/old-news/#news' | relative_url }}">Older news →</a></p>

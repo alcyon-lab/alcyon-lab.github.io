@@ -523,3 +523,4 @@ html[data-first="istanbul"] .brand-nodes .node-istanbul { order: -2; }
 }
 .area-icon { font: italic 400 1.05rem/1.3 var(--serif); letter-spacing: 0; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
 .intro p { font-size: 1.1rem; }
+.archive-section { scroll-margin-top: 90px; }

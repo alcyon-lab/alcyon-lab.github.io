@@ -14,6 +14,9 @@ email: alcyon.lab@gmail.com
 # Publications before this year are kept in _publications/ but not shown
 publications_from: 2016
 
+# News older than this date moves from Activities to the Old news page
+old_news_before: 2025-01-01
+
 join_form: https://forms.gle/FrDxYuaX18j63T1r7
 social:
   twitter: alcyonlab

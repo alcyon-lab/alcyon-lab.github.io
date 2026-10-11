@@ -5,4 +5,4 @@ title: Istanbul node
 permalink: /istanbul/
 ---
 
-The Istanbul node also hosts the [Symbolic Computation Istanbul Meetings (SCIM)]({{ '/scim/' | relative_url }}), a seminar series in symbolic computation.
+From 2021 to 2023 the Istanbul node ran the [Symbolic Computation Istanbul Meetings (SCIM)]({{ '/old-news/#scim' | relative_url }}), a seminar series in symbolic computation.

@@ -1,0 +1,43 @@
+---
+title: Old news
+permalink: /old-news/
+eyebrow: Archive
+lede: Past seminars and older announcements from the lab.
+math: true
+---
+{% assign cutoff = site.old_news_before | date: "%s" | plus: 0 %}
+{% assign news = site.news | sort: "date" | reverse %}
+
+<nav class="row-jump" aria-label="Sections">
+  <a href="#scim">SCIM seminar (2021–2023)</a>
+  <a href="#news">News before {{ site.old_news_before | date: "%Y" }}</a>
+</nav>
+
+<section id="scim" class="archive-section">
+  <h2>Symbolic Computation Istanbul Meetings <span class="count">{{ site.data.scim.size }} talks</span></h2>
+  <div class="prose">
+    <p>SCIM was a fortnightly seminar for anyone interested in symbolic computation, run by the Istanbul node from 2021 to 2023. Meetings took place on Fridays at 17:00 at IMBM (Boğaziçi University, South Campus, Bebek, Istanbul) and were streamed on Zoom, so that people interested in symbolic computation could meet and exchange ideas.</p>
+  </div>
+  <div class="talks">
+    {% for t in site.data.scim %}
+    <details class="talk">
+      <summary>
+        <span class="mono small talk-date">{{ t.when | split: " " | slice: 0, 3 | join: " " }}</span>
+        <span class="talk-title">{{ t.title }}</span>
+        <span class="talk-speaker">{{ t.speaker }} <span class="muted">· {{ t.affiliation }}</span></span>
+      </summary>
+      <div class="talk-abstract">{{ t.abstract | markdownify }}</div>
+    </details>
+    {% endfor %}
+  </div>
+</section>
+
+<section id="news" class="archive-section">
+  <h2>News before {{ site.old_news_before | date: "%Y" }}</h2>
+  <ul class="news">
+    {% for n in news %}{% assign t = n.date | date: "%s" | plus: 0 %}{% if t < cutoff %}
+    <li><time class="mono" datetime="{{ n.date | date_to_xmlschema }}">{{ n.date | date: "%d %b %Y" }}</time>
+      <div><strong>{{ n.title }}</strong>{{ n.content | markdownify }}</div></li>
+    {% endif %}{% endfor %}
+  </ul>
+</section>

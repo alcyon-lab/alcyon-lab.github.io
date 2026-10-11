@@ -19,11 +19,11 @@ JEKYLL_NO_BUNDLER_REQUIRE=true jekyll serve --livereload
 | People: current members **and alumni** | `_members/<slug>.md`, one file per person |
 | Funded projects | `_projects/<slug>.md` |
 | Publications | `_publications/<year>-<author>-<word>.md`, one file per paper (copy `_publications/_template.md`) |
-| News | `_news/YYYY-MM-DD-<slug>.md`, one file per item (copy `_news/_template.md`) |
+| News | `_news/YYYY-MM-DD-<slug>.md`, one file per item (copy `_news/_template.md`); items before `old_news_before` in `_config.yml` go to Old news |
 | Activities (conferences, workshops) | `_data/events.yml` |
 | Topics for students (Topics page) | `_topics/<slug>.md`, one file per topic (copy `_topics/_template.md`) |
 | Student levels (section titles, blurbs) | `_data/student_levels.yml` |
-| SCIM talks | `_data/scim.yml` |
+| SCIM talks (Old news page) | `_data/scim.yml` |
 | Research areas | `_data/research.yml` |
 | Software | `_software/<project>.md`, one file per project; refresh GitHub data with `python3 _scripts/update_software.py` |
 | Menu | `_data/navigation.yml` |
