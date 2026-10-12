@@ -1,8 +1,8 @@
 ---
 title: Full Hilbert Series
-node: istanbul
-levels: [undergrad-thesis]
-supervisors: []
+node: athens
+levels: [undergrad-research]
+supervisors: [zaf]
 area: [math]
 prerequisites: Mathematical maturity, abstract algebra
 status: open

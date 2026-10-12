@@ -51,7 +51,7 @@ layout: default
   <h2>Activities organised here</h2>
   <ul class="event-list">
     {% for e in evs %}
-    <li><span class="mono">{{ e.year }}</span> <strong>{{ e.title }}</strong> <span class="muted small">{{ e.where }}</span></li>
+    <li><span class="mono">{{ e.year }}</span> <strong>{% if e.link %}<a href="{{ e.link }}">{{ e.title }}</a>{% else %}{{ e.title }}{% endif %}</strong> <span class="muted small">{{ e.where }}</span></li>
     {% endfor %}
   </ul>
   {% endif %}

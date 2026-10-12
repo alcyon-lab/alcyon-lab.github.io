@@ -5,8 +5,6 @@ node: athens
 levels: [undergrad-research, msc]
 supervisors: [zaf]
 area: [math, cs]
-field: Arithmetic
-difficulty: normal
 status: open
 ---
 
@@ -28,26 +26,6 @@ The CF arithmetic section begins at Item 101A of the HAKMEM. It is terse but com
 ## Goal
 
 Implement "fast and lazy" real arithmetic. Σπεύδε βραδέως (R)
-
-## Tasks
-
-1. Literature review
-
-2. Implementation
-
-3. Benchmarking
-
-4. Extension to transcendental function computations.
-
-5. Complete report
-
-6. **alcyon** submodule for ScalarArithmetic with full documentation
-
-## Deliverables
-
-- Julia package with tests
-- Reproducible benchmarks
-- Short report (6–8 pages)
 
 ## References
 

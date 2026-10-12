@@ -7,11 +7,13 @@ lede: Open topics from both nodes, from a first undergraduate project to a PhD. 
 {% assign L = site.data.student_levels %}
 {% assign open = site.topics | where: "status", "open" | sort: "title" %}
 {% assign ongoing = site.topics | where: "status", "in-progress" | sort: "title" %}
+{% assign done = site.topics | where: "status", "completed" | sort: "title" %}
 {% assign node_keys = "athens,istanbul" | split: "," %}
 
 <nav class="row-jump" aria-label="Jump to level">
   {% for row in L.rows %}<a href="#{{ row.id }}">{{ row.title }}</a>{% endfor %}
   {% if ongoing.size > 0 %}<a href="#in-progress">In progress</a>{% endif %}
+  {% if done.size > 0 %}<a href="#completed">Completed</a>{% endif %}
 </nav>
 
 <div class="students-board">
@@ -69,6 +71,30 @@ lede: Open topics from both nodes, from a first undergraduate project to a PhD. 
           {% for t in cell %}
           <li><a href="{{ t.url | relative_url }}">{{ t.title }}</a>
             <span class="muted small">{% include advisors.html list=t.students %}{% if t.supervisors.size > 0 %} · supervised by {% include advisors.html list=t.supervisors %}{% endif %}</span></li>
+          {% endfor %}
+        </ul>
+        {% else %}<p class="muted small">Nothing listed.</p>{% endif %}
+      </div>
+      {% endfor %}
+    </div>
+  </section>
+  {% endif %}
+
+  {% if done.size > 0 %}
+  <section class="board-row" id="completed">
+    <h2 class="row-title">Completed</h2>
+    <p class="muted">Finished theses and projects.</p>
+    <div class="node-order board-cols">
+      {% for key in node_keys %}
+      {% assign own = done | where: "node", key %}{% assign shared = done | where: "node", "both" %}
+      {% assign cell = own | concat: shared %}
+      <div class="board-cell node-{{ key }}">
+        <p class="eyebrow"><span class="dot {{ key }}"></span>{{ site.data.nodes[key].name }}</p>
+        {% if cell.size > 0 %}
+        <ul class="done">
+          {% for t in cell %}
+          <li><a href="{{ t.url | relative_url }}">{{ t.title }}</a>
+            <span class="muted small">{% if t.period %}{{ t.period }} · {% endif %}{% include advisors.html list=t.students %}{% if t.supervisors.size > 0 %} · supervised by {% include advisors.html list=t.supervisors %}{% endif %}</span></li>
           {% endfor %}
         </ul>
         {% else %}<p class="muted small">Nothing listed.</p>{% endif %}

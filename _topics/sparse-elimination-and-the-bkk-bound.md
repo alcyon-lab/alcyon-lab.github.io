@@ -1,11 +1,11 @@
 ---
 title: Sparse Elimination and the BKK bound
-node: istanbul
-levels: [undergrad-thesis]
-supervisors: []
+node: athens
+levels: []
+supervisors: [zaf]
 area: [math]
 prerequisites: Mathematical maturity, abstract algebra
-status: open
+status: archived
 ---
 
 Study the proof of the BKK bound in sparse elimination theory.

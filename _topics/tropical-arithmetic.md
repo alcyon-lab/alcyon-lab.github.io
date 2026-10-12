@@ -2,11 +2,9 @@
 title: Tropical Arithmetic and Optimization
 description: Study the tropical semiring, tropical linear algebra, and tropical linear programming; connect to classical LP via the min-plus structure.
 node: athens
-levels: [msc, phd]
+levels: [msc]
 supervisors: [zaf]
 area: [math]
-field: Arithmetic
-difficulty: normal
 status: open
 ---
 
@@ -40,30 +38,6 @@ The **tropical variety** of a polynomial $$f(x_1,\ldots,x_n)$$ is the set of poi
 ## Goal
 
 Implement tropical arithmetic, tropical matrix multiplication, and a tropical linear programming solver (as a shortest-path problem). Explore at least one connection to classical optimization or algebraic geometry.
-
-## Milestones
-
-| ID  | Title                                          |
-| --- | ---------------------------------------------- |
-| M1  | Tropical semiring + polynomial evaluation      |
-| M2  | Tropical matrix mult. + shortest-path examples |
-| M3  | Tropical LP solver + comparison to classical   |
-| M4  | Tropical variety of a small example + report   |
-
-## Tasks
-
-| ID  | Title                                      | Status |
-| --- | ------------------------------------------ | ------ |
-| T1  | Tropical semiring arithmetic + polynomials | todo   |
-| T2  | Tropical matrix mult. + Floyd–Warshall     | todo   |
-| T3  | Tropical LP as min-cost flow               | todo   |
-| T4  | Tropical variety example + write-up        | todo   |
-
-## Deliverables
-
-- Julia package with tropical arithmetic and LP solver
-- Illustrated examples of tropical varieties
-- Short report (6–8 pages)
 
 ## References
 

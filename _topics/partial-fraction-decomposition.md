@@ -5,8 +5,6 @@ node: athens
 levels: [msc]
 supervisors: [zaf]
 area: [math]
-field: Algebra
-difficulty: normal
 status: open
 ---
 
@@ -44,30 +42,6 @@ For $$P(\mathbf{x})/Q(\mathbf{x})$$ with several variables the story is more com
 Implement univariate PFD over $$\mathbb{Q}$$, verify against known generating functions from combinatorics, and extend to the multivariate case for at least one variable specialization.
 
 - Repo: [alcyon-ratfun.jl](https://github.com/alcyon-lab/alcyon-ratfun.jl)
-
-## Milestones
-
-| ID  | Title                                 |
-| --- | ------------------------------------- |
-| M1  | Squarefree decomposition & Hermite    |
-| M2  | Univariate PFD over $$\mathbb{Q}$$    |
-| M3  | Coefficient extraction & benchmarks   |
-| M4  | Multivariate extension & final report |
-
-## Tasks
-
-| ID  | Title                              | Status |
-| --- | ---------------------------------- | ------ |
-| T1  | Implement squarefree decomposition | todo   |
-| T2  | Univariate PFD (CRT-based)         | todo   |
-| T3  | Coefficient extraction from PFD    | todo   |
-| T4  | Multivariate PFD + write-up        | todo   |
-
-## Deliverables
-
-- Julia package with tests
-- Benchmark on generating functions from Polyhedral Omega output
-- Short report (6–8 pages)
 
 ## References
 

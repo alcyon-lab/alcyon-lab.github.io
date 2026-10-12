@@ -5,9 +5,7 @@ node: athens
 levels: [msc, phd]
 supervisors: [zaf]
 area: [math]
-field: Algebra
-difficulty: difficult
-status: open
+status: archived
 ---
 
 
@@ -34,29 +32,6 @@ Moreover, Lean 4 allows **certified computation**: a verified algorithm can be e
 ## Goal
 
 Formalize at least one of the above in Lean 4 using Mathlib, producing a self-contained, compiling Lean file with a proof of the main correctness theorem.
-
-## Milestones
-
-| ID  | Title                                     |
-| --- | ----------------------------------------- |
-| M1  | Lean 4 + Mathlib setup; integer GCD proof |
-| M2  | Polynomial GCD or Descartes formalization |
-| M3  | Main correctness theorem proved           |
-| M4  | Write-up + clean Lean file                |
-
-## Tasks
-
-| ID  | Title                                      | Status |
-| --- | ------------------------------------------ | ------ |
-| T1  | Learn Lean 4 basics + explore Mathlib      | todo   |
-| T2  | Select target theorem + sketch paper proof | todo   |
-| T3  | Formalize main theorem in Lean 4           | todo   |
-| T4  | Clean proof + write-up                     | todo   |
-
-## Deliverables
-
-- Self-contained Lean 4 file with a compiling proof
-- Short mathematical write-up explaining the proof strategy (4–6 pages)
 
 ## Resources
 

@@ -3,7 +3,7 @@ title: A system for efficient representation of mathematical data and benchmarki
 start: 2017 Mar
 end: 2019 Jul
 agency: TUBITAK 3001
-funding: ~17k EUR
+funding: "~€17k"
 pi: Zafeirakis Zafeirakopoulos
 node: istanbul
 status: concluded

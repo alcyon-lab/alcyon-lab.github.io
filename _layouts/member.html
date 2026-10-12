@@ -12,6 +12,10 @@ layout: default
       <p class="links">
         {% if page.website %}<a class="btn btn-ghost" href="{{ page.website }}">Personal page ↗</a>{% endif %}
         {% if page.scholar %}<a class="btn btn-ghost" href="{{ page.scholar }}">Google Scholar ↗</a>{% endif %}
+        {% if page.orcid %}<a class="btn btn-ghost" href="https://orcid.org/{{ page.orcid }}">ORCID ↗</a>{% endif %}
+        {% if page.dblp %}<a class="btn btn-ghost" href="{{ page.dblp }}">DBLP ↗</a>{% endif %}
+        {% if page.github %}<a class="btn btn-ghost" href="https://github.com/{{ page.github }}">GitHub ↗</a>{% endif %}
+        {% for l in page.links %}<a class="btn btn-ghost" href="{{ l.url }}">{{ l.label }} ↗</a>{% endfor %}
         {% if page.thesis %}<a class="btn btn-ghost" href="{{ page.thesis | relative_url }}">Thesis (PDF)</a>{% endif %}
         {% if page.email %}<a class="btn btn-ghost" href="mailto:{{ page.email }}">Email</a>{% endif %}
       </p>

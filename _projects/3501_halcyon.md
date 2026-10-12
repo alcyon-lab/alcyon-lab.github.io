@@ -4,7 +4,7 @@ acronym: HALCYON
 start: 2017 Oct
 end: 2020 Oct
 agency: TUBITAK 3501
-funding: ~80k EUR
+funding: "~€80k"
 pi: Zafeirakis Zafeirakopoulos
 node: istanbul
 status: concluded

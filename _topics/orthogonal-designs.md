@@ -2,11 +2,9 @@
 title: Computer Algebra for Orthogonal Designs
 description: Use Gröbner bases to algorithmically extend complementary sequences - the split, fill, and expand algorithms that reverse the Equating/Killing Lemma - toward new orthogonal designs.
 node: athens
-levels: [msc, phd]
+levels: [msc]
 supervisors: [zaf]
 area: [math]
-field: Combinatorics
-difficulty: difficult
 status: open
 ---
 
@@ -86,30 +84,6 @@ Notice fill's output is exactly split's input, and fill/expand share the same in
 ## Goal
 
 Reproduce the split, fill, and expand algorithms (in Sage, Julia, or a CAS of your choice), verify them against the paper's worked examples above, and extend the search to type/order combinations not covered in the original paper. As a stretch goal — flagged as future work in the paper itself — investigate connecting the algebraic model to the _statistical_ properties of the resulting orthogonal designs (orthogonality, interactions), not just their existence.
-
-## Milestones
-
-| ID  | Title                                                       |
-| --- | ----------------------------------------------------------- |
-| M1  | Reproduce split/fill/expand on the paper's worked examples  |
-| M2  | Implement Gröbner basis construction for all three problems |
-| M3  | Search new type/order combinations beyond the paper         |
-| M4  | Final report                                                |
-
-## Tasks
-
-| ID  | Title                                                                           | Status |
-| --- | ------------------------------------------------------------------------------- | ------ |
-| T1  | Implement the algebraic model (variables, autocorrelation polynomials)          | todo   |
-| T2  | Implement bounded-discreteness and type-count constraints for split/fill/expand | todo   |
-| T3  | Compute Gröbner bases and interpret solutions as new sequences                  | todo   |
-| T4  | Explore new cases + write-up                                                    | todo   |
-
-## Deliverables
-
-- Implementation of split, fill, and expand, verified against the paper's worked examples
-- At least one new complementary-sequence type/order not in the original paper
-- Short report (6–8 pages)
 
 ## References
 

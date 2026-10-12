@@ -1,0 +1,30 @@
+---
+title: Recent news
+permalink: /news/
+eyebrow: News & activities
+lede: What is happening in the lab, and the conferences, sessions and workshops we organise.
+---
+{% assign cutoff = site.old_news_before | date: "%s" | plus: 0 %}
+{% assign news = site.news | sort: "date" | reverse %}
+
+<div class="news-cols">
+  <section class="news-col" aria-labelledby="col-news">
+    <h2 id="col-news">News</h2>
+    <ul class="news">
+      {% for n in news %}{% assign t = n.date | date: "%s" | plus: 0 %}{% if t >= cutoff %}
+      {% include news-item.html item=n %}
+      {% endif %}{% endfor %}
+    </ul>
+  </section>
+
+  <section class="news-col" aria-labelledby="col-activities">
+    <h2 id="col-activities">Activities</h2>
+    <ol class="timeline compact-timeline">
+      {% for e in site.data.events %}
+      {% include event-item.html event=e words=30 %}
+      {% endfor %}
+    </ol>
+  </section>
+</div>
+
+<p class="more-link"><a href="{{ '/old-news/' | relative_url }}">Older news →</a></p>

@@ -1,8 +1,8 @@
 ---
 title: Solid Partitions on a Cube
-node: istanbul
-levels: [msc, phd]
-supervisors: []
+node: athens
+levels: [undergrad-research]
+supervisors: [zaf]
 area: [math]
 prerequisites: JuliaLang, generating functions
 status: open

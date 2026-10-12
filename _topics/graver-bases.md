@@ -2,11 +2,9 @@
 title: Graver Bases
 description: Implement Graver basis computation for structured matrices and connect to Hilbert bases and integer programming augmentation.
 node: athens
-levels: [msc, phd]
+levels: [msc]
 supervisors: [zaf]
 area: [math]
-field: Algebra
-difficulty: difficult
 status: open
 ---
 
@@ -30,30 +28,6 @@ This is particularly powerful for **$$N$$-fold integer programs** (De Loera et a
 ## Goal
 
 Implement Graver basis computation for small matrices ($$n \leq 10$$), verify against the Hilbert basis, and apply the augmentation algorithm to small integer programs, including an $$N$$-fold example.
-
-## Milestones
-
-| ID  | Title                                      |
-| --- | ------------------------------------------ |
-| M1  | Hilbert basis computation for small cones  |
-| M2  | Graver basis via sign-compatibility filter |
-| M3  | Augmentation-based ILP solver              |
-| M4  | N-fold example + final report              |
-
-## Tasks
-
-| ID  | Title                                      | Status |
-| --- | ------------------------------------------ | ------ |
-| T1  | Hilbert basis (Pottier or enumeration)     | todo   |
-| T2  | Graver basis computation                   | todo   |
-| T3  | Augmentation algorithm + correctness tests | todo   |
-| T4  | N-fold ILP case study + write-up           | todo   |
-
-## Deliverables
-
-- Julia implementation with tests
-- Comparison Hilbert basis vs. Graver basis on small examples
-- Short report (6–8 pages)
 
 ## References
 

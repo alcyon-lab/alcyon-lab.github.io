@@ -5,9 +5,7 @@ node: athens
 levels: [msc]
 supervisors: [zaf]
 area: [math]
-field: Combinatorics
-difficulty: normal
-status: open
+status: archived
 ---
 
 
@@ -30,30 +28,6 @@ encodes the complete solution landscape. PO computes this as a rational function
 3. **Upper bounds via LP relaxation comparison.** Compare PO-derived tight bounds against the LP relaxation bound and branch-and-bound B&B at fixed capacities.
 
 - Repo: [po-bounds-knapsack](https://github.com/alcyon/po-bounds-knapsack)
-
-## Milestones
-
-| ID  | Title                                 |
-| --- | ------------------------------------- |
-| M1  | Replicate PO counting on toy knapsack |
-| M2  | Bound extraction & correctness tests  |
-| M3  | Benchmark suite + analysis            |
-| M4  | Final report & release                |
-
-## Tasks
-
-| ID  | Title                                      | Status |
-| --- | ------------------------------------------ | ------ |
-| T1  | Implement counting for parametric families | todo   |
-| T2  | Extract bounds from generating functions   | todo   |
-| T3  | Benchmark vs. B&B across sizes             | todo   |
-| T4  | Ablations + write-up                       | todo   |
-
-## Deliverables
-
-- PO-bound computation module
-- Benchmark across parametric families
-- Report with comparisons vs. branch-and-bound
 
 ## References
 

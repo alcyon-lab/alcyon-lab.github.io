@@ -2,11 +2,9 @@
 title: Lean and Computer Algebra
 description: Bridge the gap between Lean/Mathlib's abstract algebra and executable computer algebra - polynomial arithmetic, Gröbner bases, and certified computation.
 node: athens
-levels: [msc, phd]
+levels: [msc]
 supervisors: [zaf]
 area: [math]
-field: Algebra
-difficulty: difficult
 status: open
 ---
 
@@ -32,29 +30,6 @@ This gap between "Lean can state what a Gröbner basis is" and "Lean can compute
 ## Goal
 
 Implement one executable computer algebra primitive (polynomial GCD or a small Gröbner basis computation) in Lean 4, connect it to the corresponding Mathlib abstraction, and prove the connection.
-
-## Milestones
-
-| ID  | Title                                         |
-| --- | --------------------------------------------- |
-| M1  | Lean 4 + Mathlib setup; survey polynomial API |
-| M2  | Executable algorithm implemented (untrusted)  |
-| M3  | Correctness proof connecting it to Mathlib    |
-| M4  | Write-up + clean Lean file                    |
-
-## Tasks
-
-| ID  | Title                                           | Status |
-| --- | ----------------------------------------------- | ------ |
-| T1  | Learn Lean 4 + Mathlib's polynomial/ideal API   | todo   |
-| T2  | Implement the executable algorithm              | todo   |
-| T3  | Prove correctness against Mathlib's abstraction | todo   |
-| T4  | Clean proof + write-up                          | todo   |
-
-## Deliverables
-
-- Self-contained Lean 4 file with an executable algorithm and a proof it matches Mathlib's abstract specification
-- Short write-up on what made the algorithm hard to make both executable and verified (4–6 pages)
 
 ## Resources
 

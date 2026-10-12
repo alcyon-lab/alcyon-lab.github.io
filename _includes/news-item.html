@@ -1,0 +1,8 @@
+{% assign n = include.item %}{% assign fmt = include.format | default: "%d %b %Y" %}
+<li>
+  <div class="news-meta">
+    <time class="mono" datetime="{{ n.date | date_to_xmlschema }}">{{ n.date | date: fmt }}</time>
+    {% if n.node %}{% include node-tag.html node=n.node %}{% endif %}
+  </div>
+  <div><strong>{{ n.title }}</strong>{{ n.content | markdownify }}</div>
+</li>

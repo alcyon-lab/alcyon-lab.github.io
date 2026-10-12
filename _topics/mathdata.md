@@ -5,8 +5,6 @@ node: athens
 levels: [msc]
 supervisors: [zaf]
 area: [cs]
-field: Benchmarks
-difficulty: normal
 status: open
 ---
 
@@ -39,13 +37,6 @@ The mathdata project addresses several fundamental problems:
 **Frontend** — web interface for querying and submitting data.
 
 **DataSanitizer** — validates instances against MathDataLang definitions.
-
-## Deliverables
-
-- MathDataLang DSL specification and reference implementation
-- Working prototype of the database (backend + basic frontend)
-- Automatic benchmarking system connected to the database
-- Documentation and example datasets
 
 ## Resources
 

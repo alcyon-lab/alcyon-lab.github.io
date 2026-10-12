@@ -1,11 +1,27 @@
-# node: athens | istanbul | online
+# node: athens | istanbul | online   (link: optional web page)
+- title: Recent Advances in Symbolic Computation and Applications (special session at AIMS 2026)
+  year: 2026
+  dates: 6–10 July 2026
+  where: National and Kapodistrian University of Athens
+  organizers: Ioannis Emiris, Ilias Kotsireas, Zafeirakis Zafeirakopoulos
+  node: athens
+  description: Special session at the 15th AIMS Conference on Dynamical Systems, Differential Equations and Applications, held in Athens.
 - title: Applications of Computer Algebra
   year: 2025
-  dates: July 2025
+  dates: 14–18 July 2025
   where: Heraklion, Crete
   organizers: Giorgos Kapetanakis, Eleni Tzanaki, Zafeirakis Zafeirakopoulos
   node: athens
   description: Applications of Computer Algebra - ACA 2025 was held in Heraklion (Crete, Greece).
+  link: https://aca2025.github.io/
+- title: Symbolic-Numeric Computation (special session at ACA 2025)
+  year: 2025
+  dates: 14–18 July 2025
+  where: Heraklion, Crete
+  organizers: Tülay Ayyıldız, Fabrice Rouillier, Elias Tsigaridas
+  node: istanbul
+  link: https://aca2025.github.io/sessions/SNC/
+  description: 'Special session SS12 at ACA 2025 on combining exact symbolic manipulation with efficient numerical methods: hybrid algorithms, efficient implementations and interdisciplinary applications.'
 - title: Applications of Computer Algebra
   year: 2022
   dates: 15–19 August 2022
@@ -24,7 +40,7 @@
   year: 2022
   dates: 8–26 August 2022
   where: Gebze Technical University
-  organizers: Zafeirakis Zafeirakopoulos
+  organizers: Tülay Ayyıldız, Zafeirakis Zafeirakopoulos
   node: istanbul
   description: A three-week event celebrating symbolic computation, combining ACA 2022 and CASC 2022 at Gebze Technical University.
 - title: Machine Learning and Computer Algebra

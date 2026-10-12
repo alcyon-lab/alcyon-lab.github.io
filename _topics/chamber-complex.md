@@ -5,8 +5,6 @@ node: athens
 levels: [msc]
 supervisors: [zaf]
 area: [math]
-field: Geometry
-difficulty: normal
 status: open
 ---
 
@@ -40,12 +38,6 @@ induced by the rows of $$A$$ and the sign conditions that define feasibility tra
 ## Goal
 
 Study the definition and properties of chamber complexes, implement a basic algorithm for low-dimensional parameter spaces, and apply it to small parametric knapsack instances using the Polyhedral Omega package.
-
-## Deliverables
-
-- Julia implementation of chamber complex enumeration for low-dimensional parameter spaces
-- Application to small parametric knapsack instances via Polyhedral Omega
-- Short report (6–8 pages)
 
 ## References
 

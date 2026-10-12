@@ -19,8 +19,8 @@ JEKYLL_NO_BUNDLER_REQUIRE=true jekyll serve --livereload
 | People: current members **and alumni** | `_members/<slug>.md`, one file per person |
 | Funded projects | `_projects/<slug>.md` |
 | Publications | `_publications/<year>-<author>-<word>.md`, one file per paper (copy `_publications/_template.md`) |
-| News | `_news/YYYY-MM-DD-<slug>.md`, one file per item (copy `_news/_template.md`); items before `old_news_before` in `_config.yml` go to Old news |
-| Activities (conferences, workshops) | `_data/events.yml` |
+| News | `_news/YYYY-MM-DD-<slug>.md`, one file per item (copy `_news/_template.md`); shown on Recent news; items before `old_news_before` in `_config.yml` go to Old news |
+| Activities (conferences, sessions, workshops) | `_data/events.yml`; all shown on Recent news |
 | Topics for students (Topics page) | `_topics/<slug>.md`, one file per topic (copy `_topics/_template.md`) |
 | Student levels (section titles, blurbs) | `_data/student_levels.yml` |
 | SCIM talks (Old news page) | `_data/scim.yml` |
@@ -40,11 +40,18 @@ node: athens            # athens | istanbul | associate
 lead: false             # true only for the node lead
 alumni: false           # set to true when the person leaves
 next_position: TU Berlin (PhD)   # alumni only: where they went next (don't use `next`, Jekyll reserves it)
-advisors: [zaf, tulay]  # thesis advisors: member file names (linked) or plain names, e.g. "Prof. X (MSGSU)"
+advisors: [tulay, zaf]  # thesis advisors: member file names (linked) or plain names, e.g. "Prof. X (MSGSU)"
 thesis: /assets/theses/ada.pdf   # optional
 affiliation: National and Kapodistrian University of Athens
 website: https://…
 scholar: https://scholar.google.com/…
+email: name@example.org      # optional
+orcid: 0000-0000-0000-0000    # optional (just the ID)
+dblp: https://dblp.org/pid/…  # optional
+github: username              # optional
+links:                        # optional, any other profiles
+  - label: LinkedIn
+    url: https://www.linkedin.com/in/…
 order: 5                # sorting within a group (0 = lead, 1 faculty … 6 undergrad)
 ---
 Optional bio in Markdown.
@@ -64,9 +71,8 @@ levels: [msc, phd]      # undergrad-thesis (Istanbul) | undergrad-research (Athe
 supervisors: [zaf]      # member file names, or plain names for external co-supervisors
 area: [math, cs]
 prerequisites: What the student should already know
-field: Algebra          # optional label
-difficulty: normal      # optional: introductory | easy | normal | difficult
-status: open            # open | in-progress | taken (hidden)
+status: open            # open | in-progress | completed | taken | archived (taken and archived are hidden)
+period: 2025–26         # optional, for completed topics
 students: []            # in-progress only: member file names
 ---
 Description in Markdown.

@@ -5,8 +5,6 @@ node: athens
 levels: [msc, phd]
 supervisors: [zaf]
 area: [math]
-field: Geometry
-difficulty: difficult
 status: open
 ---
 
@@ -32,29 +30,6 @@ A **polyhedron** $$P = \{x \in \mathbb{R}^n \mid Ax \leq b\}$$ is an intersectio
 ## Goal
 
 Formalize Farkas' lemma (or a comparably load-bearing polyhedral theorem) in Lean 4 using Mathlib, producing a self-contained, compiling Lean file, and write up which parts of the informal proof needed the most work to make fully rigorous.
-
-## Milestones
-
-| ID  | Title                                                 |
-| --- | ----------------------------------------------------- |
-| M1  | Lean 4 + Mathlib setup; survey existing convexity API |
-| M2  | State target theorem; sketch the paper proof          |
-| M3  | Main theorem formalized and compiling                 |
-| M4  | Write-up + clean Lean file                            |
-
-## Tasks
-
-| ID  | Title                                        | Status |
-| --- | -------------------------------------------- | ------ |
-| T1  | Learn Lean 4 + Mathlib's convexity hierarchy | todo   |
-| T2  | Select target theorem + sketch proof         | todo   |
-| T3  | Formalize main theorem in Lean 4             | todo   |
-| T4  | Clean proof + write-up                       | todo   |
-
-## Deliverables
-
-- Self-contained Lean 4 file with a compiling proof of a Farkas-type or polyhedral structure theorem
-- Short write-up comparing the formal proof to its informal textbook version (4–6 pages)
 
 ## Resources
 

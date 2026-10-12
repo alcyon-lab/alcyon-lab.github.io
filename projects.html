@@ -19,7 +19,7 @@ lede: Grants that have funded our research since 2016.
     {% if p.acronym %}<span class="acronym">{{ p.acronym }}</span>{% endif %}
     <span class="project-title">{{ p.title }}</span>
     <span class="project-meta">{{ p.agency }}{% if p.funding %} · {{ p.funding }}{% endif %}</span>
-    <span class="project-meta">PI: {{ p.pi }}</span>
+    <span class="project-meta">PI: {{ p.pi }}{% if p.advisor %} · Advisor: {{ p.advisor }}{% endif %}</span>
   </a>
   {% endfor %}
 </div>

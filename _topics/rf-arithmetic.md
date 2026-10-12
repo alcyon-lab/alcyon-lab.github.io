@@ -5,9 +5,7 @@ node: athens
 levels: [msc, phd]
 supervisors: [zaf]
 area: [math]
-field: Arithmetic
-difficulty: normal
-status: open
+status: archived
 ---
 
 
@@ -22,12 +20,6 @@ This is the broader research program around efficient arithmetic for rational fu
 **Partial fraction strategies.** Extracting a specific coefficient $$[x^k] P(x)/Q(x)$$ requires partial fraction decomposition. In the univariate case this is classical; in the multivariate case one must choose an elimination order, and the result depends on the geometry of the denominator's zero set.
 
 **Cache-friendly multiplication & reduction.** Multiplying two sparse polynomials is essentially a merge of term products; sorting strategies and SIMD-friendly layouts can give significant speedups. GCD-based reduction is the dominant cost and benefits from modular techniques.
-
-## Deliverables
-
-- Julia package implementing sparse rational function arithmetic
-- Benchmark comparing sparse vs. dense representations
-- Short report (6–8 pages)
 
 ## References
 

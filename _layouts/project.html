@@ -8,6 +8,8 @@ layout: default
     <dl class="facts">
       <div><dt>Period</dt><dd>{{ page.start }} – {{ page.end }}</dd></div>
       <div><dt>Principal investigator</dt><dd>{{ page.pi }}</dd></div>
+      {% if page.advisor %}<div><dt>Advisor</dt><dd>{{ page.advisor }}</dd></div>{% endif %}
+      {% if page.team %}<div><dt>Team</dt><dd>{{ page.team }}</dd></div>{% endif %}
       {% if page.funding %}<div><dt>Funding</dt><dd>{{ page.funding }}</dd></div>{% endif %}
       <div><dt>Status</dt><dd><span class="status status-{{ page.status }}">{{ page.status }}</span></dd></div>
       <div><dt>Hosted by</dt><dd>{% include node-tag.html node=page.node %}</dd></div>

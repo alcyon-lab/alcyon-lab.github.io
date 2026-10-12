@@ -5,8 +5,6 @@ node: athens
 levels: [msc]
 supervisors: [zaf]
 area: [math]
-field: Arithmetic
-difficulty: normal
 status: open
 ---
 
@@ -36,30 +34,6 @@ Combinatorial generating functions are typically **sparse**: their numerators an
 Survey sparse multivariate polynomial representations, implement core rational function arithmetic (add, multiply, GCD-based reduce), and benchmark against existing CAS tools.
 
 - Repo: [alcyon-ratfun.jl](https://github.com/alcyon-lab/alcyon-ratfun.jl)
-
-## Milestones
-
-| ID  | Title                              |
-| --- | ---------------------------------- |
-| M1  | Data structures survey & prototype |
-| M2  | Core arithmetic (add, mul, reduce) |
-| M3  | Partial fraction decomposition     |
-| M4  | Benchmarks & final report          |
-
-## Tasks
-
-| ID  | Title                                      | Status |
-| --- | ------------------------------------------ | ------ |
-| T1  | Survey sparse multivariate representations | todo   |
-| T2  | Implement multiplication kernels           | todo   |
-| T3  | Sparse partial fraction pipeline           | todo   |
-| T4  | Benchmarks + write-up                      | todo   |
-
-## Deliverables
-
-- Julia package with tests
-- Benchmark against existing tools
-- Short report (6–8 pages)
 
 ## References
 

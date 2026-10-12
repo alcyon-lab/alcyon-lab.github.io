@@ -5,9 +5,7 @@ node: athens
 levels: [msc, phd]
 supervisors: [zaf]
 area: [math]
-field: AI
-difficulty: normal
-status: open
+status: archived
 ---
 
 
@@ -24,30 +22,6 @@ We explore how machine learning methods can be applied to mathematical objects (
 ## Starting point
 
 Replicate the Lample–Charton integration experiment on a small dataset of rational function integrals, then explore whether a similar approach works for polynomial GCD or root isolation sub-problems.
-
-## Milestones
-
-| ID  | Title                                   |
-| --- | --------------------------------------- |
-| M1  | Replicate Lample–Charton on toy dataset |
-| M2  | Formulate algebraic task as seq2seq     |
-| M3  | Benchmark suite + analysis              |
-| M4  | Final report & release                  |
-
-## Tasks
-
-| ID  | Title                                    | Status |
-| --- | ---------------------------------------- | ------ |
-| T1  | Replicate Lample–Charton experiment      | todo   |
-| T2  | Design algebraic ML task                 | todo   |
-| T3  | Train, evaluate, compare to exact solver | todo   |
-| T4  | Ablations + write-up                     | todo   |
-
-## Deliverables
-
-- Trained model + evaluation code
-- Comparison vs. exact symbolic solver
-- Report with analysis
 
 ## References
 

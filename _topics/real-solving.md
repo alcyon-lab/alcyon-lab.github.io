@@ -2,11 +2,9 @@
 title: Real Solving
 description: Study and implement algorithms for isolating the real roots of univariate integer polynomials.
 node: athens
-levels: [undergrad-research, msc]
+levels: [undergrad-research]
 supervisors: [zaf]
 area: [math]
-field: Algebra
-difficulty: normal
 status: open
 ---
 
@@ -28,21 +26,6 @@ and bisecting whenever a subinterval still has more than one sign change. The al
 ## Goal
 
 Study the Collins–Akritas algorithm in detail (correctness proof, termination, complexity), implement it, and compare experimentally with alternative solvers.
-
-## Milestones
-
-| ID  | Title                                   |
-| --- | --------------------------------------- |
-| M1  | Understand Descartes rule + termination |
-| M2  | Implement Collins–Akritas               |
-| M3  | Benchmark vs. other isolators           |
-| M4  | Final report                            |
-
-## Deliverables
-
-- Julia implementation of the Collins–Akritas algorithm
-- Experimental comparison with alternative real root isolators
-- Final report
 
 ## References
 

@@ -5,8 +5,6 @@ node: athens
 levels: [undergrad-research, msc]
 supervisors: [zaf]
 area: [math]
-field: Arithmetic
-difficulty: normal
 status: open
 ---
 
@@ -28,30 +26,6 @@ For $$f, g \in \mathbb{Z}[x_1,\ldots,x_n]$$ the same ideas apply but the complex
 ## Goal
 
 Implement all three algorithms for univariate polynomials over $$\mathbb{Z}$$, verify correctness on a suite of known GCDs, and benchmark running time and coefficient size as a function of degree and coefficient bitsize.
-
-## Milestones
-
-| ID  | Title                                |
-| --- | ------------------------------------ |
-| M1  | Euclidean + coefficient growth study |
-| M2  | Subresultant PRS implementation      |
-| M3  | Modular GCD + CRT reconstruction     |
-| M4  | Benchmark suite + final report       |
-
-## Tasks
-
-| ID  | Title                                    | Status |
-| --- | ---------------------------------------- | ------ |
-| T1  | Euclidean GCD + coefficient growth plots | todo   |
-| T2  | Subresultant PRS                         | todo   |
-| T3  | Modular GCD with CRT and Hensel lifting  | todo   |
-| T4  | Benchmark + write-up                     | todo   |
-
-## Deliverables
-
-- Julia package with all three algorithms and tests
-- Benchmark comparing algorithms on random and structured inputs
-- Short report (6–8 pages)
 
 ## References
 

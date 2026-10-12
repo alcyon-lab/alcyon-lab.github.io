@@ -3,7 +3,7 @@
 - { title: Publications, url: /publications/ }
 - { title: Topics,       url: /topics/ }
 - { title: Projects,     url: /projects/ }
-- { title: Activities,   url: /activities/ }
+- { title: Recent news,  url: /news/ }
 - { title: Software,     url: /software/ }
 - { title: Old news,     url: /old-news/ }
 - { title: Join,         url: /join/ }

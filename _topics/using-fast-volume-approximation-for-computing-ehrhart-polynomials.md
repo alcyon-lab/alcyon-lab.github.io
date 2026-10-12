@@ -1,8 +1,8 @@
 ---
 title: Using fast volume approximation for computing Ehrhart polynomials
-node: istanbul
-levels: [undergrad-thesis]
-supervisors: []
+node: athens
+levels: [undergrad-research]
+supervisors: [zaf]
 area: [math, cs]
 prerequisites: programming in JuliaLang
 status: open

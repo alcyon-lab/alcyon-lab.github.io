@@ -4,7 +4,7 @@ acronym: GRAPE
 start: 2019 Jun
 end: 2022 Jun
 agency: Bilateral Project with France - TUBITAK 2509
-funding: ~50k EUR
+funding: "~€50k"
 pi: Zafeirakis Zafeirakopoulos, Ayesha Asloob Qureshi, Elias Tsigaridas (INRIA Paris, French side)
 node: istanbul
 status: concluded

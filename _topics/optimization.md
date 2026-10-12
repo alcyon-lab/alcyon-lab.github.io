@@ -5,9 +5,7 @@ node: athens
 levels: [msc, phd]
 supervisors: [zaf]
 area: [math]
-field: Optimization
-difficulty: difficult
-status: open
+status: archived
 ---
 
 
@@ -32,12 +30,6 @@ Combine PO (exact, expensive) with classical solvers (approximate, fast): run PO
 ## Background
 
 Barvinok's algorithm (1994) counts integer points in a polytope in polynomial time when the dimension is fixed. Polyhedral Omega (Breuer & Zafeirakopoulos, 2017) extends this to parametric settings, computing a piecewise rational generating function over the parameter space.
-
-## Deliverables
-
-- Julia implementation of at least one PO-based optimization method (bounds, cutting planes, or hybrid)
-- Benchmark comparison against classical branch-and-bound / cutting-plane solvers
-- Short report (6–8 pages)
 
 ## References
 

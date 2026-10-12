@@ -5,9 +5,7 @@ node: athens
 levels: [msc, phd]
 supervisors: [zaf]
 area: [math, cs]
-field: AI
-difficulty: difficult
-status: open
+status: archived
 ---
 
 
@@ -32,30 +30,6 @@ Unlike most machine learning settings, a wrong answer here is not merely graded 
 ## Goal
 
 Build a small, reproducible evaluation pipeline (data extraction from Lean proofs, an existing or lightly adapted model, and a scoring script) for one machine-learning-for-theorem-proving task, and report where it succeeds and fails.
-
-## Milestones
-
-| ID  | Title                                                       |
-| --- | ----------------------------------------------------------- |
-| M1  | Environment setup; extract proof states from a Lean project |
-| M2  | Baseline model running end-to-end on extracted data         |
-| M3  | Evaluation + failure analysis                               |
-| M4  | Final report                                                |
-
-## Tasks
-
-| ID  | Title                                                 | Status |
-| --- | ----------------------------------------------------- | ------ |
-| T1  | Set up LeanDojo (or equivalent) data extraction       | todo   |
-| T2  | Run a baseline retrieval/tactic model                 | todo   |
-| T3  | Build the evaluation benchmark + run failure analysis | todo   |
-| T4  | Write-up                                              | todo   |
-
-## Deliverables
-
-- Reproducible pipeline: Lean proof-state extraction, model, and scoring script
-- A small benchmark of proof states drawn from this lab's own Lean formalizations
-- Final report analyzing where the model succeeds and fails
 
 ## Resources
 

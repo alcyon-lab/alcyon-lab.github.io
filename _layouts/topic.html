@@ -7,8 +7,6 @@ layout: default
     <p class="topic-tags">
       {% include node-tag.html node=page.node %}
       {% if page.status == "in-progress" %}<span class="node-tag alumni">In progress</span>{% endif %}
-      {% if page.field %}<span class="tag">{{ page.field }}</span>{% endif %}
-      {% if page.difficulty %}<span class="tag tag-diff diff-{{ page.difficulty }}">{{ page.difficulty }}</span>{% endif %}
     </p>
     <h1>{{ page.title }}</h1>
     {% if page.description %}<p class="lede">{{ page.description }}</p>{% endif %}

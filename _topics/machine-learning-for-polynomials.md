@@ -1,8 +1,8 @@
 ---
 title: Machine Learning for Polynomials
-node: istanbul
-levels: [undergrad-thesis]
-supervisors: []
+node: athens
+levels: [undergrad-research]
+supervisors: [zaf]
 area: [cs]
 prerequisites: Familiarity with ML and Python or JuliaLang
 status: open

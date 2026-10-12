@@ -5,9 +5,7 @@ node: athens
 levels: [msc]
 supervisors: [zaf]
 area: [math]
-field: Number Theory
-difficulty: difficult
-status: open
+status: archived
 ---
 
 
@@ -37,30 +35,6 @@ The first output vector $$b_1$$ satisfies $$\|b_1\| \leq 2^{(k-1)/2} \lambda_1$$
 ## Goal
 
 Implement LLL over $$\mathbb{Q}$$ (exact arithmetic), verify the size-reduction and Lovász conditions after each step, and apply it to at least one of: polynomial factoring over $$\mathbb{Q}$$, or finding short vectors in random lattices.
-
-## Milestones
-
-| ID  | Title                                    |
-| --- | ---------------------------------------- |
-| M1  | Gram–Schmidt orthogonalization (exact)   |
-| M2  | LLL core algorithm with condition checks |
-| M3  | Application: polynomial factoring or SVP |
-| M4  | Final report                             |
-
-## Tasks
-
-| ID  | Title                                   | Status |
-| --- | --------------------------------------- | ------ |
-| T1  | Exact rational Gram–Schmidt             | todo   |
-| T2  | LLL reduction loop                      | todo   |
-| T3  | Polynomial factoring or SVP application | todo   |
-| T4  | Benchmark + write-up                    | todo   |
-
-## Deliverables
-
-- Julia implementation with exact arithmetic
-- Correctness tests and approximation factor measurements
-- Short report (6–8 pages)
 
 ## References
 

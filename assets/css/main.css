@@ -400,9 +400,6 @@ table.alumni { width: 100%; border-collapse: collapse; font-size: .93rem; }
 .topic h3 a:hover { color: var(--brand); }
 .topic-sup { display: flex; justify-content: space-between; align-items: baseline; gap: .8rem; flex-wrap: wrap; }
 .topic-sup .more { font-weight: 500; white-space: nowrap; margin-left: auto; }
-.tag-diff { background: transparent; border: 1px solid var(--line); color: var(--muted); }
-.diff-difficult { color: var(--brand); border-color: color-mix(in srgb, var(--brand) 40%, transparent); }
-.diff-easy, .diff-introductory { color: var(--online); border-color: color-mix(in srgb, var(--online) 40%, transparent); }
 .ongoing { list-style: none; padding: 0; margin: 0; }
 .ongoing li { display: flex; align-items: baseline; gap: .6rem; flex-wrap: wrap; padding: .7rem 0; border-bottom: 1px solid var(--line); }
 .ongoing a { font-weight: 600; }
@@ -524,3 +521,19 @@ html[data-first="istanbul"] .brand-nodes .node-istanbul { order: -2; }
 .area-icon { font: italic 400 1.05rem/1.3 var(--serif); letter-spacing: 0; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
 .intro p { font-size: 1.1rem; }
 .archive-section { scroll-margin-top: 90px; }
+.tl-body h3 a { color: var(--ink); text-decoration-color: var(--line); } .tl-body h3 a:hover { text-decoration-color: var(--brand); }
+
+/* Recent news: news | activities */
+.news-cols { display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: start; }
+.news-col > h2 { margin-top: 1.2em; padding-bottom: .5rem; border-bottom: 2px solid var(--ink); }
+.compact-timeline .tl-item { grid-template-columns: 3.5rem 1fr; gap: .8rem; }
+.compact-timeline .tl-body h3 { font-size: 1.1rem; }
+.compact-timeline .tl-body p { font-size: .92rem; }
+.more-link { margin-top: 2.5rem; }
+@media (max-width: 860px) { .news-cols { grid-template-columns: 1fr; gap: 0; } }
+
+/* news: date with node tag underneath */
+.news-meta { display: flex; flex-direction: column; align-items: flex-start; gap: .4rem; }
+.news-meta .node-tag { font-size: .62rem; padding: .3em .55em; }
+.news li { grid-template-columns: 7.5rem 1fr; }
+@media (max-width: 520px) { .news-meta { flex-direction: row; align-items: center; gap: .6rem; } }

@@ -4,16 +4,8 @@
 <script>
   // Apply a saved light/dark choice before the page paints
   try { var t = localStorage.getItem('theme'); if (t === 'light' || t === 'dark') document.documentElement.dataset.theme = t; } catch (e) {}
-  // Show Athens or Istanbul first at random, keeping the same order for the rest of the visit
-  (function () {
-    var first;
-    try { first = sessionStorage.getItem('first-node'); } catch (e) {}
-    if (first !== 'athens' && first !== 'istanbul') {
-      first = Math.random() < 0.5 ? 'athens' : 'istanbul';
-      try { sessionStorage.setItem('first-node', first); } catch (e) {}
-    }
-    document.documentElement.dataset.first = first;
-  })();
+  // Show Athens or Istanbul first, chosen at random on every page load
+  document.documentElement.dataset.first = Math.random() < 0.5 ? 'athens' : 'istanbul';
 </script>
 {% seo title=false %}
 <title>{% if page.name and page.layout == "member" %}{{ page.name }} · {% elsif page.title and page.url != "/" %}{{ page.title | strip_html }} · {% endif %}{{ site.title }} lab</title>

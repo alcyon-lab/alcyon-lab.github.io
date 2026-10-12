@@ -16,7 +16,7 @@ math: true
 <section id="scim" class="archive-section">
   <h2>Symbolic Computation Istanbul Meetings <span class="count">{{ site.data.scim.size }} talks</span></h2>
   <div class="prose">
-    <p>SCIM was a fortnightly seminar for anyone interested in symbolic computation, run by the Istanbul node from 2021 to 2023. Meetings took place on Fridays at 17:00 at IMBM (Boğaziçi University, South Campus, Bebek, Istanbul) and were streamed on Zoom, so that people interested in symbolic computation could meet and exchange ideas.</p>
+    <p>SCIM was a fortnightly seminar for anyone interested in symbolic computation, run by the Istanbul node from 2021 to 2023. Meetings took place on Fridays at 17:00 at IMBM (Boğaziçi University, South Campus, Bebek, Istanbul) and were streamed on Zoom, so that people interested in symbolic computation could meet and exchange ideas. Tülay Ayyıldız served on the organising committee in 2021–2022.</p>
   </div>
   <div class="talks">
     {% for t in site.data.scim %}
@@ -36,8 +36,8 @@ math: true
   <h2>News before {{ site.old_news_before | date: "%Y" }}</h2>
   <ul class="news">
     {% for n in news %}{% assign t = n.date | date: "%s" | plus: 0 %}{% if t < cutoff %}
-    <li><time class="mono" datetime="{{ n.date | date_to_xmlschema }}">{{ n.date | date: "%d %b %Y" }}</time>
-      <div><strong>{{ n.title }}</strong>{{ n.content | markdownify }}</div></li>
+    {% include news-item.html item=n %}
     {% endif %}{% endfor %}
   </ul>
 </section>
+

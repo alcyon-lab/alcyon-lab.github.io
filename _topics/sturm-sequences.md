@@ -5,9 +5,7 @@ node: athens
 levels: [undergrad-research, msc]
 supervisors: [zaf]
 area: [math]
-field: Algebra
-difficulty: easy
-status: open
+status: archived
 ---
 
 
@@ -44,30 +42,6 @@ Using **subresultant pseudo-remainder sequences** controls the coefficient growt
 ## Goal
 
 Implement Sturm's theorem using subresultant remainders, verify on a suite of polynomials, and produce a head-to-head comparison with the Descartes/Collins–Akritas isolator on running time and output quality.
-
-## Milestones
-
-| ID  | Title                          |
-| --- | ------------------------------ |
-| M1  | Implement naïve Sturm chain    |
-| M2  | Subresultant version           |
-| M3  | Comparison suite vs. Descartes |
-| M4  | Final report                   |
-
-## Tasks
-
-| ID  | Title                             | Status |
-| --- | --------------------------------- | ------ |
-| T1  | Naive Sturm chain + root count    | todo   |
-| T2  | Subresultant remainder sequence   | todo   |
-| T3  | Descartes isolator for comparison | todo   |
-| T4  | Benchmark suite + write-up        | todo   |
-
-## Deliverables
-
-- Julia implementation with tests
-- Benchmark comparing Sturm and Descartes on random and structured inputs
-- Short report (4–6 pages)
 
 ## References
 

@@ -5,8 +5,6 @@ node: athens
 levels: [msc]
 supervisors: [zaf]
 area: [math]
-field: Algebra
-difficulty: normal
 status: in-progress
 students: [eugenia_maria_betsani]
 ---
@@ -32,14 +30,6 @@ Formally, evaluating at $$\mathbf{x} = (\beta^{e_1},\ldots,\beta^{e_n})$$ for a 
 Understand the Ben-Or–Tiwari algorithm (correctness, complexity), implement it in Julia (see repo below), and explore probabilistic variants with improved complexity.
 
 - Repo: [alcyon-interpolation.jl](https://github.com/alcyon-lab/alcyon-interpolation.jl)
-
-## Tasks
-
-## Deliverables
-
-- Julia package with tests
-- Reproducible benchmarks
-- Short report (6–8 pages)
 
 ## References
 

@@ -59,11 +59,10 @@ body_class: home
 <section class="band">
   <div class="wrap two-col">
     <div>
-      <div class="section-head"><h2>News</h2><a href="{{ '/activities/' | relative_url }}">Activities →</a></div>
+      <div class="section-head"><h2>News</h2><a href="{{ '/news/' | relative_url }}">Recent news →</a></div>
       <ul class="news">
         {% assign news = site.news | sort: "date" | reverse %}{% for n in news limit:4 %}
-        <li><time class="mono" datetime="{{ n.date | date_to_xmlschema }}">{{ n.date | date: "%b %Y" }}</time>
-          <div><strong>{{ n.title }}</strong>{{ n.content | markdownify }}</div></li>
+        {% include news-item.html item=n format="%b %Y" %}
         {% endfor %}
       </ul>
     </div>

@@ -1,8 +1,8 @@
 ---
-title: Barvinok's algorithm
-node: istanbul
-levels: [undergrad-thesis]
-supervisors: []
+title: "Complexity of Barvinok's algorithm"
+node: athens
+levels: [undergrad-research]
+supervisors: [zaf]
 area: [math]
 prerequisites: Mathematical maturity, abstract algebra, geometry
 status: open

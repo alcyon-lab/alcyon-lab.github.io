@@ -5,8 +5,6 @@ node: athens
 levels: [msc, phd]
 supervisors: [zaf]
 area: [math]
-field: Optimization
-difficulty: difficult
 status: open
 ---
 
@@ -28,12 +26,6 @@ This yields:
 1. **Symbolic cone operations** — the omega elimination step must track symbolic constraints, leading to parameterized polyhedral cones.
 2. **Chamber decomposition** — subdivide parameter space into chambers such that the generating function is a fixed rational function within each chamber.
 3. **Computational complexity** — the number of chambers may be exponential; efficient data structures and algorithms are needed.
-
-## Deliverables
-
-- Julia prototype extending Polyhedral Omega to symbolic parameters on a restricted case
-- Worked examples showing parametric feasibility regions and optimal value functions
-- Short report (6–8 pages)
 
 ## References
 
